@@ -1,0 +1,32 @@
+﻿PrikaziSveKomandeKey          := "!0" ; Prikaz svih komandi unutar ovog programa.
+
+PretresOvjeravanjeKey         := "!1" ; HOTKEY ZA PRETRES I OVJERAVANJE AKO LEZI
+PretresLeziKey                := "!2" ; HOTKEY ZA PRETRES AKO LEZI
+PretresPredaoKey              := "!3" ; HOTKEY ZA PRETRES AKO JE DIGAO RUKE
+OvjeravanjeKey                := "!4" ; HOTKEY ZA OVJERAVANJE
+DizanjePovrijedjenogKey       := "!5" ; HOTKEY ZA DIZANJE OSOBE S PODA
+OduzimanjeKomunikacijeKey     := "!6" ; HOTKEY ZA ODUZIMANJE KOMUNIKACIJE
+PronalazakKey                 := "!7" ; HOTKEY ZA PRONALAZAK
+NePronalazakKey               := "!8" ; HOTKEY ZA NE PRONALAZAK
+
+GepekInventoriKey             := "!i" ; HOTKEY ZA GEPEK + INVENTORI
+GepekKey                      := "!l" ; HOTKEY ZA GEPEK BRZO
+UnequipKey                    := "!q" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+
+PripremaPecanjeKey            := "F8" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+PecanjeKey                    := "F9" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+KupovinaOpremeKey             := "!o" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+AFKKey                        := "!a" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+RudarenjeKey                  := "!r" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+SadjenjeKey                   := "!s" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+DorucakKey                    := "!j" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+
+QuickRelogKey                 := "!F12" ; HOTKEY ZA RELOG RAGEMP
+ReloadKey                     := "F12" ; HOTKEY ZA RELOAD SKRIPTE
+
+; Sleep time (Obicno ne treba mijenjati ovo, u slucaju nekih problema pokušati s promjenama)
+IntLMenuDelay        := 800  ; pauza (in ms) after focussing game when AHK-GUI took focus.
+IntMMenuDelay        := 1500 ; pauza (in ms) after opening interaction menu.
+IntF5MenuDelay       := 800 ; delay (in ms) after opening phone menu.
+IntChatDelay         := 1000   ; delay (in ms) between scrolls in the phone menu.
+IntInventoryDelay    := 2200   ; delay (in ms) delay between send key commands.
