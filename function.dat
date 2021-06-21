@@ -1,5 +1,3 @@
-;test
-
 Process_Suspend(PID_or_Name){
     PID := (InStr(PID_or_Name,".")) ? ProcExist(PID_or_Name) : PID_or_Name
     h:=DllCall("OpenProcess", "uInt", 0x1F0FFF, "Int", 0, "Int", pid)
