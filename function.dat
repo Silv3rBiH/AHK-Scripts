@@ -1,4 +1,4 @@
-msgbox test
+; v1.2.1
 
 Process_Suspend(PID_or_Name){
     PID := (InStr(PID_or_Name,".")) ? ProcExist(PID_or_Name) : PID_or_Name
