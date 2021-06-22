@@ -1,4 +1,4 @@
-; v1.2.2
+; v1.2.3
 
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
@@ -439,6 +439,8 @@ ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish1.
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
+	BackupClickX := foundX
+	BackupClickY := foundY
 	Click, %foundX%, %foundY%
 	sleep 600
 	Click, %foundX%, %foundY%
@@ -454,6 +456,8 @@ ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish2.
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
+	BackupClickX := foundX
+	BackupClickY := foundY
 	Click, %foundX%, %foundY%
 	sleep 600
 	Click, %foundX%, %foundY%
@@ -469,6 +473,42 @@ ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish3.
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep 600
+	Click, %foundX%, %foundY%
+	sleep 600
+	Click, %foundX%, %foundY%
+	krug = 0
+	jelo := jelo + 1
+	upecao := upecao + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0
+}else{
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish4.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 5
+	foundY := foundY + 18
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep 600
+	Click, %foundX%, %foundY%
+	sleep 600
+	Click, %foundX%, %foundY%
+	krug = 0
+	jelo := jelo + 1
+	upecao := upecao + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0
+}else{
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish5.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 5
+	foundY := foundY + 18
+	BackupClickX := foundX
+	BackupClickY := foundY
 	Click, %foundX%, %foundY%
 	sleep 600
 	Click, %foundX%, %foundY%
@@ -498,14 +538,14 @@ If(ErrorLevel == 0){
 	if krug = 180
 	{
 	MouseMove, 0, 0
-	Click, %foundX%, %foundY%
+	Click, %BackupClickX%, %BackupClickY%
 	Goto, pocetak
 	}
 
 	if krug = 240
 	{
 	MouseMove, 0, 0
-	Click, %foundX%, %foundY%
+	Click, %BackupClickX%, %BackupClickY%
 	Goto, pocetak
 	}
 
@@ -521,7 +561,7 @@ If(ErrorLevel == 0){
 	postdata=
 	(
 	{
-	  "content": "<@%DiscordID%> Fish bot prestao sa radom - Zakovalo!"
+	  "content": "<@%DiscordID%> Fish bot prestao sa radom %UserName% - Zakovalo!"
 	}
 	)
 	WebRequest := ComObjCreate("WinHttp.WinHttpRequest.5.1")
@@ -538,12 +578,16 @@ If(ErrorLevel == 0){
 }
 }
 }
+}
+}
 
 jelo:
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish1.jpg
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
+	BackupClickX := foundX
+	BackupClickY := foundY
 	Click, %foundX%, %foundY%
 	sleep 700
 	Click, %foundX%, %foundY%
@@ -559,6 +603,8 @@ ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish2.
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
+	BackupClickX := foundX
+	BackupClickY := foundY
 	Click, %foundX%, %foundY%
 	sleep 700
 	Click, %foundX%, %foundY%
@@ -574,6 +620,8 @@ ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish3.
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
+	BackupClickX := foundX
+	BackupClickY := foundY
 	Click, %foundX%, %foundY%
 	sleep 700
 	Click, %foundX%, %foundY%
@@ -585,10 +633,47 @@ If(ErrorLevel == 0){
 	SplashTextOn, 40, , %upecao%
 	WinMove, %upecao%,, 0 , 0 ; Move the alert screen away from the center
 }else{
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish4.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 5
+	foundY := foundY + 18
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep 600
+	Click, %foundX%, %foundY%
+	sleep 600
+	Click, %foundX%, %foundY%
+	krug = 0
+	jelo := jelo + 1
+	upecao := upecao + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0
+}else{
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish5.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 5
+	foundY := foundY + 18
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep 600
+	Click, %foundX%, %foundY%
+	sleep 600
+	Click, %foundX%, %foundY%
+	krug = 0
+	jelo := jelo + 1
+	upecao := upecao + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0
+}else{
 	Goto, jelo
 }
 }
 }
+}
+}
+
 sendvic:
 Send {i}
 Sleep 1000
