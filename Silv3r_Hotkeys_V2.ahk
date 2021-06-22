@@ -1,4 +1,4 @@
-; v1.2.6
+; v1.2.7
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
@@ -6,7 +6,7 @@ if not A_IsAdmin
 }
 #SingleInstance Force
 URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Silv3r_Hotkeys_V2.ahk,update.txt
-Sleep 1000
+Sleep 1500
 FileReadLine, update, update.txt, 1
 FileReadLine, currentVersion, %A_ScriptName%, 1
 	if (update = currentVersion) {
