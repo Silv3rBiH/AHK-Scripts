@@ -1,4 +1,3 @@
-
 PrikaziSveKomandeKey          := "!0" ; Prikaz svih komandi unutar ovog programa.
 
 PretresOvjeravanjeKey         := "!1" ; HOTKEY ZA PRETRES I OVJERAVANJE AKO LEZI
@@ -54,5 +53,6 @@ Hotkey, %DorucakKey%, Dorucak
 Hotkey, %QuickRelogKey%, QuickRelog
 Hotkey, %ReloadKey%, Reload
 Return
+
 
 !F9:: reload
