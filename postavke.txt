@@ -30,3 +30,26 @@ IntMMenuDelay        := 1500 ; pauza (in ms) after opening interaction menu.
 IntF5MenuDelay       := 800 ; delay (in ms) after opening phone menu.
 IntChatDelay         := 1000   ; delay (in ms) between scrolls in the phone menu.
 IntInventoryDelay    := 2200   ; delay (in ms) delay between send key commands.
+
+; Hotkey/Function mapping
+Hotkey, %PrikaziSveKomandeKey%, PrikaziSveKomande
+Hotkey, %PretresOvjeravanjeKey%, PretresOvjeravanje
+Hotkey, %PretresLeziKey%, PretresLezi
+Hotkey, %PretresPredaoKey%, PretresPredao
+Hotkey, %OvjeravanjeKey%, Ovjeravanje
+Hotkey, %DizanjePovrijedjenogKey%, DizanjePovrijedjenog
+Hotkey, %OduzimanjeKomunikacijeKey%, OduzimanjeKomunikacije
+Hotkey, %PronalazakKey%, Pronalazak
+Hotkey, %NePronalazakKey%, NePronalazak
+Hotkey, %GepekInventoriKey%, GepekInventori
+Hotkey, %GepekKey%, Gepek
+Hotkey, %PripremaPecanjeKey%, PripremaPecanje
+Hotkey, %PecanjeKey%, Pecanje
+Hotkey, %KupovinaOpremeKey%, KupovinaOpreme
+Hotkey, %AFKKey%, AFK
+Hotkey, %RudarenjeKey%, Rudarenje
+Hotkey, %SadjenjeKey%, Sadjenje
+Hotkey, %DorucakKey%, Dorucak
+Hotkey, %QuickRelogKey%, QuickRelog
+Hotkey, %ReloadKey%, Reload
+Return
