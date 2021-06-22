@@ -1,4 +1,4 @@
-; v1.2.2
+; v1.2.3
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
@@ -13,7 +13,7 @@ FileReadLine, currentVersion, %A_ScriptName%, 1
 	} else {
 	FileCopy, update.txt, %A_ScriptName%, 1
 	FileDelete, update.txt
-	msgbox, 0, Update uspiješan!, Update uspiješno obavljen, skripta će se sada ;reloadati!
+	msgbox, 0, Update uspijesan!, Update uspijesno obavljen, skripta će se sada reloadati!
 	Reload
 	}
 
@@ -55,11 +55,41 @@ if FileExist("key.dll")
 	if line = Valid
 	{
 	
-		if FileExist("postavke.txt") {
+	if FileExist("postavke.txt") {
 		}else{
-			URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/postavke.txt,postavke.txt
-			Reload
-			}
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/postavke.txt,postavke.txt
+		Reload
+		}
+	if FileExist("fish1.jpg") {
+		}else{
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/fish1.jpg,fish1.jpg
+		}
+	if FileExist("fish2.jpg") {
+		}else{
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/fish2.jpg,fish2.jpg
+		Reload
+		}
+	if FileExist("fish3.jpg") {
+		}else{
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/fish3.jpg,fish3.jpg
+		}
+	if FileExist("fish4.jpg") {
+		}else{
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/fish4.jpg,fish4.jpg
+		}
+	if FileExist("stolica.jpg") {
+		}else{
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/stolica.jpg,stolica.jpg
+		}
+	if FileExist("sendvic.jpg") {
+		}else{
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/sendvic.jpg,sendvic.jpg
+		}
+	if FileExist("voda.jpg") {
+		}else{
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/voda.jpg,voda.jpg
+		}
+
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/function.dat,function.dat
 		sleep 2000
 		FileReadLine, updatef, function.dat, 1
