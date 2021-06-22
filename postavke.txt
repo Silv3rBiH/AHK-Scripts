@@ -53,3 +53,5 @@ Hotkey, %DorucakKey%, Dorucak
 Hotkey, %QuickRelogKey%, QuickRelog
 Hotkey, %ReloadKey%, Reload
 Return
+
+!F9:: reload
