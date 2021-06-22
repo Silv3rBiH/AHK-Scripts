@@ -1,4 +1,10 @@
-; v1.2.1
+; v1.2.2
+
+;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
+;    ...
+;} else if (A_ScreenWidth = 1080 & A_ScreenHeight = 1024) {
+;    ...
+;}
 
 Process_Suspend(PID_or_Name){
     PID := (InStr(PID_or_Name,".")) ? ProcExist(PID_or_Name) : PID_or_Name
