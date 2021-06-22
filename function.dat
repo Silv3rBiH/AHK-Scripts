@@ -1,4 +1,4 @@
-; v1.2.3
+; v1.2.4
 
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
@@ -571,6 +571,7 @@ If(ErrorLevel == 0){
 	Process_Suspend("gta5.exe")
 	Sleep, 8000
 	Process_Resume("gta5.exe")
+	Reload
 	}
 
 	Goto, pronadjiribu
