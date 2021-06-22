@@ -1,10 +1,10 @@
-; v1.2.4
+; v1.2.5
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
    ExitApp
 }
-
+#SingleInstance Force
 URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Silv3r_Hotkeys_V2.ahk,update.txt
 FileReadLine, update, update.txt, 1
 FileReadLine, currentVersion, %A_ScriptName%, 1
@@ -43,6 +43,7 @@ if FileExist("key.dll")
 			If InStr(A_LoopReadLine, ID)
 			{
 				Line := "Valid"
+				Auth := "True"
 				Continue
 			}
 			If Line
@@ -52,7 +53,7 @@ if FileExist("key.dll")
 			}}
 			FileDelete, authentication.data
 		}
-	if line = Valid
+	if Auth = True
 	{
 	
 	if FileExist("postavke.txt") {
