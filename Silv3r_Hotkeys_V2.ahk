@@ -6,6 +6,7 @@ if not A_IsAdmin
 }
 #SingleInstance Force
 URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Silv3r_Hotkeys_V2.ahk,update.txt
+Sleep 1000
 FileReadLine, update, update.txt, 1
 FileReadLine, currentVersion, %A_ScriptName%, 1
 	if (update = currentVersion) {
@@ -35,6 +36,7 @@ if FileExist("key.dll")
 			FileReadLine, UserName, %A_AppDataCommon%\Silv3rHotkey\key.dll, 2
 			FileReadLine, ID, %A_AppDataCommon%\Silv3rHotkey\key.dll, 3
 			URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/IDs.txt,authentication.data
+			Sleep 1000
 			Line := False
 			Loop, Read, authentication.data
 			{
@@ -59,36 +61,43 @@ if FileExist("key.dll")
 	if FileExist("postavke.txt") {
 		}else{
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/postavke.txt,postavke.txt
+		Sleep 200
 		Reload
 		}
 	if FileExist("fish1.jpg") {
 		}else{
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/fish1.jpg,fish1.jpg
+		Sleep 200
 		}
 	if FileExist("fish2.jpg") {
 		}else{
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/fish2.jpg,fish2.jpg
-		Reload
+		Sleep 200
 		}
 	if FileExist("fish3.jpg") {
 		}else{
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/fish3.jpg,fish3.jpg
+		Sleep 200
 		}
 	if FileExist("fish4.jpg") {
 		}else{
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/fish4.jpg,fish4.jpg
+		Sleep 200
 		}
 	if FileExist("stolica.jpg") {
 		}else{
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/stolica.jpg,stolica.jpg
+		Sleep 200
 		}
 	if FileExist("sendvic.jpg") {
 		}else{
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/sendvic.jpg,sendvic.jpg
+		Sleep 200
 		}
 	if FileExist("voda.jpg") {
 		}else{
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/voda.jpg,voda.jpg
+		Sleep 200
 		}
 
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/function.dat,function.dat
@@ -109,6 +118,6 @@ if FileExist("key.dll")
 }
 
 #MaxThreadsPerHotkey 2
-
+Sleep 1000
 #Include *i postavke.txt
 #Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
