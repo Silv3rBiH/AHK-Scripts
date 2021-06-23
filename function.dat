@@ -1,4 +1,4 @@
-; v1.3.0
+; v1.3.1
 
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
