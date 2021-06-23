@@ -350,7 +350,7 @@ msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slika
 	Loop %KolikoSjemenki%
 	{
 	Send {i}
-	Sleep 2000
+	Sleep %IntInventoryDelay%
 	Click, 70, 180
 	Sleep 500
 	Send {tab}
@@ -366,7 +366,7 @@ msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slika
 		Loop %KolikoSjemenki%
 		{
 		Send {i}
-		Sleep 2000
+		Sleep %IntInventoryDelay%
 		Click, 70, 180
 		Sleep 500
 		Send {tab}
@@ -382,7 +382,7 @@ msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slika
 			Loop %KolikoSjemenki%
 			{
 			Send {i}
-			Sleep 2000
+			Sleep %IntInventoryDelay%
 			Click, 70, 180
 			Sleep 500
 			Send {tab}
@@ -399,27 +399,6 @@ msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slika
 else
 MsgBox Prvo postavi sjemenke na prvo mjesto u invetory-u pa pokreni ponovo!
 return
-
-Loop 5
-{
-Send {e down}
-Sleep 1500
-Send {e up}
-Loop 10
-{
-Send {i}
-Sleep IntInventoryDelay
-Click, 300, 240
-Sleep 500
-Send {tab}
-Sleep 100
-Send {enter}
-Send {w down}
-Sleep 1500
-Send {w up}
-}
-}
-Return
 
 AFK:
 SoundBeep 150 , 150
