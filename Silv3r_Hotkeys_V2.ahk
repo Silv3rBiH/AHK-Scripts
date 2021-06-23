@@ -128,6 +128,8 @@ if FileExist("key.dll")
 }
 
 #MaxThreadsPerHotkey 2
+SplashTextOn, 250, , Skripta Silv3r Hotkey uspijesno pokrenuta!
 Sleep 1000
+SplashTextOff
 #Include *i postavke.txt
 #Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
