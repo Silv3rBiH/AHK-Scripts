@@ -1,5 +1,5 @@
-; v1.3.1
-
+; v1.3.12
+; hotfix
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
 ;} else if (A_ScreenWidth = 1080 & A_ScreenHeight = 1024) {
