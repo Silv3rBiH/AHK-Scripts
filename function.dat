@@ -1,4 +1,4 @@
-; v1.2.8
+; v1.2.9
 
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
@@ -399,7 +399,6 @@ Click, 1055, 530
 Sleep 20
 Click, 1150, 600
 Sleep 150
-}
 } else if (A_ScreenWidth = 1366 & A_ScreenHeight = 768) {
 Loop 1
 {
@@ -415,6 +414,8 @@ Sleep 20
 Click, 100, 600
 Sleep 150
 }
+}
+msgbox %A_ScreenWidth% sa A_ScreenHeight%
 }
 Return
 
