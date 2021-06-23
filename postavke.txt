@@ -1,41 +1,41 @@
-;v1.2.5
+;v1.2.8
 
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
-PrikaziSveKomandeKey          := "!0" ; Prikaz svih komandi unutar ovog programa.
+PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
 
-PretresOvjeravanjeKey         := "!1" ; HOTKEY ZA PRETRES I OVJERAVANJE AKO LEZI
-PretresLeziKey                := "!2" ; HOTKEY ZA PRETRES AKO LEZI
-PretresPredaoKey              := "!3" ; HOTKEY ZA PRETRES AKO JE DIGAO RUKE
-OvjeravanjeKey                := "!4" ; HOTKEY ZA OVJERAVANJE
-DizanjePovrijedjenogKey       := "!5" ; HOTKEY ZA DIZANJE OSOBE S PODA
-OduzimanjeKomunikacijeKey     := "!6" ; HOTKEY ZA ODUZIMANJE KOMUNIKACIJE
-PronalazakKey                 := "!7" ; HOTKEY ZA PRONALAZAK
-NePronalazakKey               := "!8" ; HOTKEY ZA NE PRONALAZAK
+PretresOvjeravanjeKey         := "!1"     ; HOTKEY ZA PRETRES I OVJERAVANJE AKO LEZI
+PretresLeziKey                := "!2"     ; HOTKEY ZA PRETRES AKO LEZI
+PretresPredaoKey              := "!3"     ; HOTKEY ZA PRETRES AKO JE DIGAO RUKE
+OvjeravanjeKey                := "!4"     ; HOTKEY ZA OVJERAVANJE
+DizanjePovrijedjenogKey       := "!5"     ; HOTKEY ZA DIZANJE OSOBE S PODA
+OduzimanjeKomunikacijeKey     := "!6"     ; HOTKEY ZA ODUZIMANJE KOMUNIKACIJE
+PronalazakKey                 := "!7"     ; HOTKEY ZA PRONALAZAK
+NePronalazakKey               := "!8"     ; HOTKEY ZA NE PRONALAZAK
 
-GepekInventoriKey             := "!i" ; HOTKEY ZA GEPEK + INVENTORI
-GepekKey                      := "!l" ; HOTKEY ZA GEPEK BRZO
-UnequipKey                    := "!q" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+GepekInventoriKey             := "!i"     ; HOTKEY ZA GEPEK + INVENTORI
+GepekKey                      := "!l"     ; HOTKEY ZA GEPEK BRZO
+UnequipKey                    := "!q"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
 
-PripremaPecanjeKey            := "F8" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
-PecanjeKey                    := "F9" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
-KupovinaOpremeKey             := "!o" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
-AFKKey                        := "!a" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
-RudarenjeKey                  := "!r" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
-SadjenjeKey                   := "!s" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
-DorucakKey                    := "!j" ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+PripremaPecanjeKey            := "F8"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+PecanjeKey                    := "F9"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+KupovinaOpremeKey             := "!o"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+AFKKey                        := "!a"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+RudarenjeKey                  := "!r"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+SadjenjeKey                   := "!s"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+DorucakKey                    := "!j"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
 
-QuickRelogKey                 := "!F12" ; HOTKEY ZA RELOG RAGEMP
-ReloadKey                     := "F12" ; HOTKEY ZA RELOAD SKRIPTE
+QuickRelogKey                 := "!F12"   ; HOTKEY ZA RELOG RAGEMP
+ReloadKey                     := "F12"    ; HOTKEY ZA RELOAD SKRIPTE
 
-
-; Sleep time (Obicno ne treba mijenjati ovo, u slucaju nekih problema pokušati s promjenama)
-IntLMenuDelay        := 800    ; pauza (u ms) koliko treba da vam otvori L menu u autu.
-IntMMenuDelay        := 1500   ; pauza (u ms) koliko treba da vam otvori M menu kraj neke osobe.
-IntF5MenuDelay       := 800    ; pauza (u ms) koliko treba da vam otvori F5 menu.
-IntChatDelay         := 1000   ; pauza (u ms) koliko treba da posalje poruku. (najbolje po malo pojacavati ako se uoci greska)
-IntInventoryDelay    := 2200   ; pauza (u ms) pauza (u ms) koliko treba da vam otvori inventory.
-IntFishDelay    := 600   ; pauza (u ms) koliko treba pauze izmedju clicka na ribu za pecanje. (najmanja moguca je 600ms ispod ce pucat udice, pojacavati po 100ms)
-
+CustomTextCall1Key            := "+1"     ; HOTKEY ZA CUSTOM TEXT 1
+CustomTextCall2Key            := "+2"     ; HOTKEY ZA CUSTOM TEXT 2
+CustomTextCall3Key            := "+3"     ; HOTKEY ZA CUSTOM TEXT 3
+CustomTextCall4Key            := "+4"     ; HOTKEY ZA CUSTOM TEXT 4
+CustomTextCall5Key            := "+5"     ; HOTKEY ZA CUSTOM TEXT 5
+CustomTextCall6Key            := "+6"     ; HOTKEY ZA CUSTOM TEXT 6
+CustomTextCall7Key            := "+7"     ; HOTKEY ZA CUSTOM TEXT 7
+CustomTextCall8Key            := "+8"     ; HOTKEY ZA CUSTOM TEXT 8
+CustomTextCall9Key            := "+9"     ; HOTKEY ZA CUSTOM TEXT 9
 
 ; CustomText (Mijenjajte po volji custom text koristi od SHIFT+1 DO SHIFT+9 za slanje podesivog texta u chat, postavit cu neke primjere slobodni ste da promijenite)
 CustomText1 := "/me Pokazuje prstom na auto"
@@ -48,7 +48,27 @@ CustomText7 := "/me "
 CustomText8 := "/me "
 CustomText8 := "/me "
 
+; Sleep time (Obicno ne treba mijenjati ovo, u slucaju nekih problema pokušati s promjenama)
+IntLMenuDelay        := 800    ; pauza (u ms) koliko treba da vam otvori L menu u autu.
+IntMMenuDelay        := 1500   ; pauza (u ms) koliko treba da vam otvori M menu kraj neke osobe.
+IntF5MenuDelay       := 800    ; pauza (u ms) koliko treba da vam otvori F5 menu.
+IntChatDelay         := 1000   ; pauza (u ms) koliko treba da posalje poruku. (najbolje po malo pojacavati ako se uoci greska)
+IntInventoryDelay    := 2200   ; pauza (u ms) pauza (u ms) koliko treba da vam otvori inventory.
+IntFishDelay         := 600   ; pauza (u ms) koliko treba pauze izmedju clicka na ribu za pecanje. (najmanja moguca je 600ms ispod ce pucat udice, pojacavati po 100ms)
+
+
+
 ; Hotkey mapping (ovo ne drkajte bez mog ovlastenja sjebat cete skriptu, hvala)
+Hotkey, %CustomTextCall1Key%, CustomTextCall1
+Hotkey, %CustomTextCall2Key%, CustomTextCall2
+Hotkey, %CustomTextCall3Key%, CustomTextCall3
+Hotkey, %CustomTextCall4Key%, CustomTextCall4
+Hotkey, %CustomTextCall5Key%, CustomTextCall5
+Hotkey, %CustomTextCall6Key%, CustomTextCall6
+Hotkey, %CustomTextCall7Key%, CustomTextCall7
+Hotkey, %CustomTextCall8Key%, CustomTextCall8
+Hotkey, %CustomTextCall9Key%, CustomTextCall9
+
 Hotkey, %PrikaziSveKomandeKey%, PrikaziSveKomande
 Hotkey, %PretresOvjeravanjeKey%, PretresOvjeravanje
 Hotkey, %PretresLeziKey%, PretresLezi
