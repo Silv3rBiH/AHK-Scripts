@@ -1,4 +1,4 @@
-; v1.2.9
+; v1.3.0
 
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
@@ -385,39 +385,41 @@ Return
 KupovinaOpreme:
 if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 msgbox Za vasu rezoluciju nije podrzano
-} else if (A_ScreenWidth = 1080 & A_ScreenHeight = 1024) {
-Loop 5000
+}else{
+	if (A_ScreenWidth = 1080 & A_ScreenHeight = 1024) {
+	Loop 5000
 	{
-Click, 1850, 450
-Sleep 100
-Click, 1040, 530
-Sleep 20
-Click, 1055, 530
-Click, 1055, 530
-Click, 1055, 530
-Click, 1055, 530
-Sleep 20
-Click, 1150, 600
-Sleep 150
+	Click, 1850, 450
+	Sleep 100
+	Click, 1040, 530
+	Sleep 20
+	Click, 1055, 530
+	Click, 1055, 530
+	Click, 1055, 530
+	Click, 1055, 530
+	Sleep 20
+	Click, 1150, 600
+	Sleep 150
 	}
-} else if (A_ScreenWidth = 1366 & A_ScreenHeight = 768) {
-Loop 1
-{
-Click, 100, 450
-Sleep 100
-Click, 100, 530
-Sleep 20
-Click, 100, 530
-Click, 100, 530
-Click, 100, 530
-Click, 100, 530
-Sleep 20
-Click, 100, 600
-Sleep 150
-}
+	}else{
+		if (A_ScreenWidth = 1366 & A_ScreenHeight = 768) {
+		Loop 1
+		{
+		Click, 100, 450
+		Sleep 100
+		Click, 100, 530
+		Sleep 20
+		Click, 100, 530
+		Click, 100, 530
+		Click, 100, 530
+		Click, 100, 530
+		Sleep 20
+		Click, 100, 600
+		Sleep 150
+		}
+	}
 }
 msgbox %A_ScreenWidth% sa %A_ScreenHeight%
-}
 Return
 
 Rudarenje:
