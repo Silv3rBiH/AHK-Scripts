@@ -1,4 +1,4 @@
-;v1.2.9
+;v1.2.4
 
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
 PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
@@ -48,13 +48,17 @@ CustomText7 := "/me "
 CustomText8 := "/me "
 CustomText8 := "/me "
 
+
+; Sadjenje sjemenki loop
+KolikoSjemenki       := 10     ; koliko sjemenki da posadi u jednom krugu.
+
 ; Sleep time (Obicno ne treba mijenjati ovo, u slucaju nekih problema pokušati s promjenama)
 IntLMenuDelay        := 800    ; pauza (u ms) koliko treba da vam otvori L menu u autu.
 IntMMenuDelay        := 1500   ; pauza (u ms) koliko treba da vam otvori M menu kraj neke osobe.
 IntF5MenuDelay       := 800    ; pauza (u ms) koliko treba da vam otvori F5 menu.
 IntChatDelay         := 1000   ; pauza (u ms) koliko treba da posalje poruku. (najbolje po malo pojacavati ako se uoci greska)
 IntInventoryDelay    := 2200   ; pauza (u ms) pauza (u ms) koliko treba da vam otvori inventory.
-IntFishDelay         := 600   ; pauza (u ms) koliko treba pauze izmedju clicka na ribu za pecanje. (najmanja moguca je 600ms ispod ce pucat udice, pojacavati po 100ms)
+IntFishDelay         := 600    ; pauza (u ms) koliko treba pauze izmedju clicka na ribu za pecanje. (najmanja moguca je 600ms ispod ce pucat udice, pojacavati po 100ms)
 
 
 
