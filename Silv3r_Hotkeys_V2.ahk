@@ -1,4 +1,4 @@
-; v1.2.4
+; v1.2.42
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
@@ -111,7 +111,7 @@ if FileExist("key.dll")
 		}
 
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/function.dat,function.dat
-		sleep 2000
+		sleep 2500
 		FileReadLine, updatef, function.dat, 1
 		FileReadLine, currentVersionf, %A_AppDataCommon%\Silv3rHotkey\function.dat, 1
 		if (updatef = currentVersionf) {
@@ -129,7 +129,7 @@ if FileExist("key.dll")
 
 #MaxThreadsPerHotkey 2
 SplashTextOn, 250, , Skripta Silv3r Hotkey uspijesno pokrenuta!
-Sleep 1000
+Sleep 2000
 SplashTextOff
 #Include *i postavke.txt
 #Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
