@@ -1,6 +1,7 @@
-; v1.3.14
+; v1.3.16
 ; fix shop
 ; hotfix
+; fix sjemenke
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
 ;} else if (A_ScreenWidth = 1080 & A_ScreenHeight = 1024) {
@@ -346,7 +347,7 @@ if A_ScreenWidth = 0
 {
 msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slikajte ovu gresku pa posaljite da se ispravi.
 }else{
-	if A_ScreenWidth = 1080 
+	if A_ScreenWidth = 1920
 	{
 	Loop %KolikoSjemenki%
 	{
