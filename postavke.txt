@@ -1,41 +1,41 @@
-;v1.2.8
+;v1.2.9
 
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
 PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
 
-PretresOvjeravanjeKey         := "!1"     ; HOTKEY ZA PRETRES I OVJERAVANJE AKO LEZI
-PretresLeziKey                := "!2"     ; HOTKEY ZA PRETRES AKO LEZI
-PretresPredaoKey              := "!3"     ; HOTKEY ZA PRETRES AKO JE DIGAO RUKE
-OvjeravanjeKey                := "!4"     ; HOTKEY ZA OVJERAVANJE
-DizanjePovrijedjenogKey       := "!5"     ; HOTKEY ZA DIZANJE OSOBE S PODA
-OduzimanjeKomunikacijeKey     := "!6"     ; HOTKEY ZA ODUZIMANJE KOMUNIKACIJE
-PronalazakKey                 := "!7"     ; HOTKEY ZA PRONALAZAK
-NePronalazakKey               := "!8"     ; HOTKEY ZA NE PRONALAZAK
+PretresOvjeravanjeKey         := "!1"     ; HOTKEY ZA PRETRES I OVJERAVANJE AKO LEZI   - DEFAULT "ALT + 1"
+PretresLeziKey                := "!2"     ; HOTKEY ZA PRETRES AKO LEZI                 - DEFAULT "ALT + 2"
+PretresPredaoKey              := "!3"     ; HOTKEY ZA PRETRES AKO JE DIGAO RUKE        - DEFAULT "ALT + 3"
+OvjeravanjeKey                := "!4"     ; HOTKEY ZA OVJERAVANJE                      - DEFAULT "ALT + 4"
+DizanjePovrijedjenogKey       := "!5"     ; HOTKEY ZA DIZANJE OSOBE S PODA             - DEFAULT "ALT + 5"
+OduzimanjeKomunikacijeKey     := "!6"     ; HOTKEY ZA ODUZIMANJE KOMUNIKACIJE          - DEFAULT "ALT + 6"
+PronalazakKey                 := "!7"     ; HOTKEY ZA PRONALAZAK                       - DEFAULT "ALT + 7"
+NePronalazakKey               := "!8"     ; HOTKEY ZA NE PRONALAZAK                    - DEFAULT "ALT + 8"
 
-GepekInventoriKey             := "!i"     ; HOTKEY ZA GEPEK + INVENTORI
-GepekKey                      := "!l"     ; HOTKEY ZA GEPEK BRZO
-UnequipKey                    := "!q"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+GepekInventoriKey             := "!i"     ; HOTKEY ZA GEPEK + INVENTORI                - DEFAULT "ALT + I"
+GepekKey                      := "!l"     ; HOTKEY ZA GEPEK BRZO                       - DEFAULT "ALT + L"
+UnequipKey                    := "!q"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA              - DEFAULT "ALT + Q"
 
-PripremaPecanjeKey            := "F8"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
-PecanjeKey                    := "F9"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
-KupovinaOpremeKey             := "!o"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
-AFKKey                        := "!a"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
-RudarenjeKey                  := "!r"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
-SadjenjeKey                   := "!s"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
-DorucakKey                    := "!j"     ; HOTKEY ZA BRZI UNEQUIP ORUZJA
+PripremaPecanjeKey            := "F8"     ; HOTKEY ZA SPLITANJE I DROPANJE STOLICA     - DEFAULT "F8"       
+PecanjeKey                    := "F9"     ; HOTKEY ZA POCETAK PECANJA                  - DEFAULT "F9"
+KupovinaOpremeKey             := "!o"     ; HOTKEY ZA KUPOVINU OPREME U SHOPU          - DEFAULT "ALT + O"
+AFKKey                        := "!a"     ; HOTKEY ZA AFK MODE                         - DEFAULT "ALT + A"
+RudarenjeKey                  := "!r"     ; HOTKEY ZA RUDARENJE MODE                   - DEFAULT "ALT + R"
+SadjenjeKey                   := "!s"     ; HOTKEY ZA SADJENJE TRAVE                   - DEFAULT "ALT + S"
+DorucakKey                    := "!j"     ; HOTKEY ZA BRZI DORUCAK                     - DEFAULT "ALT + J"
 
-QuickRelogKey                 := "!F12"   ; HOTKEY ZA RELOG RAGEMP
-ReloadKey                     := "F12"    ; HOTKEY ZA RELOAD SKRIPTE
+QuickRelogKey                 := "!F12"   ; HOTKEY ZA RELOG RAGEMP                     - DEFAULT "ALT + F12"
+ReloadKey                     := "F12"    ; HOTKEY ZA RELOAD SKRIPTE                   - DEFAULT "F12"
 
-CustomTextCall1Key            := "+1"     ; HOTKEY ZA CUSTOM TEXT 1
-CustomTextCall2Key            := "+2"     ; HOTKEY ZA CUSTOM TEXT 2
-CustomTextCall3Key            := "+3"     ; HOTKEY ZA CUSTOM TEXT 3
-CustomTextCall4Key            := "+4"     ; HOTKEY ZA CUSTOM TEXT 4
-CustomTextCall5Key            := "+5"     ; HOTKEY ZA CUSTOM TEXT 5
-CustomTextCall6Key            := "+6"     ; HOTKEY ZA CUSTOM TEXT 6
-CustomTextCall7Key            := "+7"     ; HOTKEY ZA CUSTOM TEXT 7
-CustomTextCall8Key            := "+8"     ; HOTKEY ZA CUSTOM TEXT 8
-CustomTextCall9Key            := "+9"     ; HOTKEY ZA CUSTOM TEXT 9
+CustomTextCall1Key            := "^+1"     ; HOTKEY ZA CUSTOM TEXT 1                   - DEFAULT "CTRL + SHIFT + 1"
+CustomTextCall2Key            := "^+2"     ; HOTKEY ZA CUSTOM TEXT 2                   - DEFAULT "CTRL + SHIFT + 2"
+CustomTextCall3Key            := "^+3"     ; HOTKEY ZA CUSTOM TEXT 3                   - DEFAULT "CTRL + SHIFT + 3"
+CustomTextCall4Key            := "^+4"     ; HOTKEY ZA CUSTOM TEXT 4                   - DEFAULT "CTRL + SHIFT + 4"
+CustomTextCall5Key            := "^+5"     ; HOTKEY ZA CUSTOM TEXT 5                   - DEFAULT "CTRL + SHIFT + 5"
+CustomTextCall6Key            := "^+6"     ; HOTKEY ZA CUSTOM TEXT 6                   - DEFAULT "CTRL + SHIFT + 6"
+CustomTextCall7Key            := "^+7"     ; HOTKEY ZA CUSTOM TEXT 7                   - DEFAULT "CTRL + SHIFT + 7"
+CustomTextCall8Key            := "^+8"     ; HOTKEY ZA CUSTOM TEXT 8                   - DEFAULT "CTRL + SHIFT + 8"
+CustomTextCall9Key            := "^+9"     ; HOTKEY ZA CUSTOM TEXT 9                   - DEFAULT "CTRL + SHIFT + 9"
 
 ; CustomText (Mijenjajte po volji custom text koristi od SHIFT+1 DO SHIFT+9 za slanje podesivog texta u chat, postavit cu neke primjere slobodni ste da promijenite)
 CustomText1 := "/me Pokazuje prstom na auto"
