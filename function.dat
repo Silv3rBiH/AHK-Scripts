@@ -1,4 +1,4 @@
-; v1.3.0
+; v1.2.8
 
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
@@ -416,6 +416,7 @@ msgbox Za vasu rezoluciju nije podrzano
 		Sleep 20
 		Click, 100, 600
 		Sleep 150
+		}
 		}
 	}
 }
