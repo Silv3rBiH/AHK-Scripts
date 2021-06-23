@@ -14,7 +14,7 @@ FileReadLine, currentVersion, %A_ScriptName%, 1
 	} else {
 	FileCopy, update.txt, %A_ScriptName%, 1
 	FileDelete, update.txt
-	msgbox, 0, Update uspijesan!, Update uspijesno obavljen, skripta će se sada reloadati!
+	msgbox, 0, Update uspijesan!, Update uspijesno obavljen, skripta ce se sada reloadati!
 	Reload
 	}
 
