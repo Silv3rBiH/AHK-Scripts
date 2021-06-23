@@ -415,7 +415,7 @@ Click, 100, 600
 Sleep 150
 }
 }
-msgbox %A_ScreenWidth% sa A_ScreenHeight%
+msgbox %A_ScreenWidth% sa %A_ScreenHeight%
 }
 Return
 
