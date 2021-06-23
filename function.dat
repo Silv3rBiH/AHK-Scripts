@@ -1,4 +1,4 @@
-; v1.2.4
+; v1.2.41
 
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
@@ -567,6 +567,8 @@ krug = 0
 
 loop
 {
+loop
+{
 
 pocetak:
 send {e}
@@ -806,6 +808,7 @@ If(ErrorLevel == 0){
 	WinMove, %upecao%,, 0 , 0
 }else{
 	Goto, jelo
+}
 }
 }
 }
