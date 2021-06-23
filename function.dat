@@ -1,4 +1,4 @@
-; v1.2.8
+; v1.2.7
 
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
@@ -339,12 +339,84 @@ Return
 
 Sadjenje:
 
-
-;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
-;    ...
-;} else if (A_ScreenWidth = 1080 & A_ScreenHeight = 1024) {
-;    ...
-;}
+MsgBox, 4,, Da li su sjemenke postavljene na prvo mjesto u inventory-u?
+IfMsgBox Yes
+if A_ScreenWidth = 0 
+{
+msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slikajte ovu gresku pa posaljite da se ispravi.
+}else{
+	if A_ScreenWidth = 1080 
+	{
+	Loop 5
+	{
+	Send {e down}
+	Sleep 1500
+	Send {e up}
+	Loop 10
+	{
+	Send {i}
+	Sleep IntInventoryDelay
+	Click, 300, 240
+	Sleep 500
+	Send {tab}
+	Sleep 100
+	Send {enter}
+	Send {w down}
+	Sleep 1500
+	Send {w up}
+	}
+	}
+	}else{
+		if A_ScreenWidth = 1366 
+		{
+		Loop 5
+		{
+		Send {e down}
+		Sleep 1500
+		Send {e up}
+		Loop 10
+		{
+		Send {i}
+		Sleep IntInventoryDelay
+		Click, 300, 240
+		Sleep 500
+		Send {tab}
+		Sleep 100
+		Send {enter}
+		Send {w down}
+		Sleep 1500
+		Send {w up}
+		}
+		}
+		}else{
+			if A_ScreenWidth = 1366 
+			{
+			Loop 5
+			{
+			Send {e down}
+			Sleep 1500
+			Send {e up}
+			Loop 10
+			{
+			Send {i}
+			Sleep IntInventoryDelay
+			Click, 300, 240
+			Sleep 500
+			Send {tab}
+			Sleep 100
+			Send {enter}
+			Send {w down}
+			Sleep 1500
+			Send {w up}
+			}
+			}
+			}
+		}
+	}
+}
+else
+MsgBox Prvo postavi sjemenke na prvo mjesto u invetory-u pa pokreni ponovo!
+return
 
 Loop 5
 {
@@ -383,44 +455,73 @@ SendKey1:
 Return
 
 KupovinaOpreme:
-if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
-msgbox Za vasu rezoluciju nije podrzano
+if A_ScreenWidth = 0 
+{
+msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slikajte ovu gresku pa posaljite da se ispravi.
 }else{
-	if (A_ScreenWidth = 1080 & A_ScreenHeight = 1024) {
-	Loop 5000
+	if A_ScreenWidth = 1080 
 	{
-	Click, 1850, 450
-	Sleep 100
-	Click, 1040, 530
-	Sleep 20
-	Click, 1055, 530
-	Click, 1055, 530
-	Click, 1055, 530
-	Click, 1055, 530
-	Sleep 20
-	Click, 1150, 600
-	Sleep 150
-	}
-	}else{
-		if (A_ScreenWidth = 1366 & A_ScreenHeight = 768) {
-		Loop 1
+	Loop 5000
 		{
-		Click, 100, 450
-		Sleep 100
-		Click, 100, 530
+		Click, 1850, 450
+		Sleep 220
+		Click, 1040, 530
 		Sleep 20
-		Click, 100, 530
-		Click, 100, 530
-		Click, 100, 530
-		Click, 100, 530
+		Click, 1055, 530
 		Sleep 20
-		Click, 100, 600
-		Sleep 150
+		Click, 1055, 530
+		Sleep 20
+		Click, 1055, 530
+		Sleep 20
+		Click, 1055, 530
+		Sleep 20
+		Click, 1150, 600
+		Sleep 200
 		}
+	}else{
+		if A_ScreenWidth = 1366 
+		{
+		Loop 10
+			{
+			Click, 1290, 180
+			Sleep 200
+			Click, 780, 380
+			Sleep 20
+			Click, 780, 380
+			Sleep 20
+			Click, 780, 380
+			Sleep 20
+			Click, 780, 380
+			Sleep 20
+			Click, 780, 380
+			Sleep 20
+			Click, 880, 440
+			Sleep 200
+			}
+		}else{
+			if A_ScreenWidth = 1366 
+			{
+			Loop 10
+				{
+				Click, 1290, 180
+				Sleep 200
+				Click, 780, 380
+				Sleep 20
+				Click, 780, 380
+				Sleep 20
+				Click, 780, 380
+				Sleep 20
+				Click, 780, 380
+				Sleep 20
+				Click, 780, 380
+				Sleep 20
+				Click, 880, 440
+				Sleep 200
+				}
+			}
 		}
 	}
 }
-msgbox %A_ScreenWidth% sa %A_ScreenHeight%
 Return
 
 Rudarenje:
