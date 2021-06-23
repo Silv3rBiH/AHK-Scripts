@@ -1,4 +1,4 @@
-; v1.2.7
+; v1.2.9
 
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
@@ -347,16 +347,11 @@ msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slika
 }else{
 	if A_ScreenWidth = 1080 
 	{
-	Loop 5
-	{
-	Send {e down}
-	Sleep 1500
-	Send {e up}
-	Loop 10
+	Loop %KolikoSjemenki%
 	{
 	Send {i}
-	Sleep IntInventoryDelay
-	Click, 300, 240
+	Sleep 2000
+	Click, 70, 180
 	Sleep 500
 	Send {tab}
 	Sleep 100
@@ -365,20 +360,14 @@ msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slika
 	Sleep 1500
 	Send {w up}
 	}
-	}
 	}else{
 		if A_ScreenWidth = 1366 
 		{
-		Loop 5
-		{
-		Send {e down}
-		Sleep 1500
-		Send {e up}
-		Loop 10
+		Loop %KolikoSjemenki%
 		{
 		Send {i}
-		Sleep IntInventoryDelay
-		Click, 300, 240
+		Sleep 2000
+		Click, 70, 180
 		Sleep 500
 		Send {tab}
 		Sleep 100
@@ -387,20 +376,14 @@ msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slika
 		Sleep 1500
 		Send {w up}
 		}
-		}
 		}else{
 			if A_ScreenWidth = 1366 
 			{
-			Loop 5
-			{
-			Send {e down}
-			Sleep 1500
-			Send {e up}
-			Loop 10
+			Loop %KolikoSjemenki%
 			{
 			Send {i}
-			Sleep IntInventoryDelay
-			Click, 300, 240
+			Sleep 2000
+			Click, 70, 180
 			Sleep 500
 			Send {tab}
 			Sleep 100
@@ -408,7 +391,6 @@ msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slika
 			Send {w down}
 			Sleep 1500
 			Send {w up}
-			}
 			}
 			}
 		}
