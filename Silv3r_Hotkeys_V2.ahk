@@ -6,7 +6,7 @@ if not A_IsAdmin
 }
 #SingleInstance Force
 URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Silv3r_Hotkeys_V2.ahk,update.txt
-Sleep 1500
+Sleep 2500
 FileReadLine, update, update.txt, 1
 FileReadLine, currentVersion, %A_ScriptName%, 1
 	if (update = currentVersion) {
