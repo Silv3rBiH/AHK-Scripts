@@ -1,4 +1,4 @@
-; v1.2.41
+; v1.2.42
 
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
@@ -582,9 +582,9 @@ If(ErrorLevel == 0){
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
 	krug = 0
 	jelo := jelo + 1
@@ -599,9 +599,9 @@ If(ErrorLevel == 0){
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
 	krug = 0
 	jelo := jelo + 1
@@ -616,9 +616,9 @@ If(ErrorLevel == 0){
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
 	krug = 0
 	jelo := jelo + 1
@@ -633,9 +633,9 @@ If(ErrorLevel == 0){
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
 	krug = 0
 	jelo := jelo + 1
@@ -650,9 +650,9 @@ If(ErrorLevel == 0){
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
 	krug = 0
 	jelo := jelo + 1
@@ -730,9 +730,9 @@ If(ErrorLevel == 0){
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
 	krug = 0
 	upecao := upecao + 1
@@ -747,9 +747,9 @@ If(ErrorLevel == 0){
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
 	krug = 0
 	upecao := upecao + 1
@@ -764,9 +764,9 @@ If(ErrorLevel == 0){
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
 	krug = 0
 	upecao := upecao + 1
@@ -781,9 +781,9 @@ If(ErrorLevel == 0){
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
 	krug = 0
 	jelo := jelo + 1
@@ -798,9 +798,9 @@ If(ErrorLevel == 0){
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
-	sleep IntFishDelay
+	sleep %IntFishDelay%
 	Click, %foundX%, %foundY%
 	krug = 0
 	jelo := jelo + 1
