@@ -26,6 +26,7 @@ DorucakKey                    := "!j"     ; HOTKEY ZA BRZI DORUCAK              
 
 QuickRelogKey                 := "!F12"   ; HOTKEY ZA RELOG RAGEMP                     - DEFAULT "ALT + F12"
 ReloadKey                     := "F12"    ; HOTKEY ZA RELOAD SKRIPTE                   - DEFAULT "F12"
+ReloadKey2                    := "!F9"    ; BACKUP HOTKEY ZA RELOAD SKRIPTE            - DEFAULT "ALT + F9"
 
 CustomTextCall1Key            := "^+1"     ; HOTKEY ZA CUSTOM TEXT 1                   - DEFAULT "CTRL + SHIFT + 1"
 CustomTextCall2Key            := "^+2"     ; HOTKEY ZA CUSTOM TEXT 2                   - DEFAULT "CTRL + SHIFT + 2"
