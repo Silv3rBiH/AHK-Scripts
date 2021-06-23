@@ -1,7 +1,8 @@
-; v1.3.16
+; v1.3.17
 ; fix shop
 ; hotfix
 ; fix sjemenke
+; fix jelo
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
 ;} else if (A_ScreenWidth = 1080 & A_ScreenHeight = 1024) {
@@ -326,7 +327,7 @@ Dorucak:
 	voda1:
 	Send {i}
 	Sleep IntInventoryDelay
-	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *50 voda.jpg
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *65 voda.jpg
 		If(ErrorLevel == 0){
 		foundX := foundX + 8
 		foundY := foundY + 8
@@ -835,7 +836,7 @@ ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *50 sendvi
 voda:
 Send {i}
 Sleep 500
-ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *50 voda.jpg
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *65 voda.jpg
 	If(ErrorLevel == 0){
 	foundX := foundX + 8
 	foundY := foundY + 8
