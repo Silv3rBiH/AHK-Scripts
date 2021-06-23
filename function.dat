@@ -565,9 +565,9 @@ jelo = 0
 provjera = 0
 krug = 0
 
-loop
+Loop
 {
-loop
+Loop
 {
 
 pocetak:
@@ -720,6 +720,7 @@ If(ErrorLevel == 0){
 }
 }
 }
+}
 
 jelo:
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish1.jpg
@@ -808,7 +809,6 @@ If(ErrorLevel == 0){
 	WinMove, %upecao%,, 0 , 0
 }else{
 	Goto, jelo
-}
 }
 }
 }
