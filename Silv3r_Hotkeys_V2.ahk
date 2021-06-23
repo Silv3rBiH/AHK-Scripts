@@ -1,4 +1,4 @@
-; v1.2.8
+; v1.2.9
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
@@ -59,16 +59,19 @@ if FileExist("key.dll")
 	{
 	
 	if FileExist("postavke.txt") {
-		}else{
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/postavke.txt,postavke1.txt
 		sleep 2000
 		FileReadLine, updatep, postavke1.txt, 1
 		FileReadLine, currentVersionp, postavke.txt, 1
 		if (updatef = currentVersionf) {
-		FileDelete, postavke1.txt
-		} else {
-		FileCopy, postavke1.txt, postavke.txt, 1
-		FileDelete, postavke1.txt
+			FileDelete, postavke1.txt
+		}else{
+			FileCopy, postavke1.txt, postavke.txt, 1
+			FileDelete, postavke1.txt
+			Reload
+			}
+		}else{
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/postavke.txt,postavke.txt
 		Reload
 		}
 	if FileExist("fish1.jpg") {
