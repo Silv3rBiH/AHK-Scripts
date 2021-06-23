@@ -577,8 +577,8 @@ pronadjiribu:
 
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish1.jpg
 If(ErrorLevel == 0){
-	foundX := foundX + 5
-	foundY := foundY + 18
+	foundX := foundX + 0
+	foundY := foundY + 20
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
@@ -594,8 +594,8 @@ If(ErrorLevel == 0){
 }else{
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish2.jpg
 If(ErrorLevel == 0){
-	foundX := foundX + 5
-	foundY := foundY + 18
+	foundX := foundX + 0
+	foundY := foundY + 20
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
@@ -611,8 +611,8 @@ If(ErrorLevel == 0){
 }else{
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish3.jpg
 If(ErrorLevel == 0){
-	foundX := foundX + 5
-	foundY := foundY + 18
+	foundX := foundX + 0
+	foundY := foundY + 20
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
@@ -628,8 +628,8 @@ If(ErrorLevel == 0){
 }else{
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish4.jpg
 If(ErrorLevel == 0){
-	foundX := foundX + 5
-	foundY := foundY + 18
+	foundX := foundX + 0
+	foundY := foundY + 20
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
@@ -645,8 +645,8 @@ If(ErrorLevel == 0){
 }else{
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish5.jpg
 If(ErrorLevel == 0){
-	foundX := foundX + 5
-	foundY := foundY + 18
+	foundX := foundX + 0
+	foundY := foundY + 20
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
@@ -725,8 +725,8 @@ If(ErrorLevel == 0){
 jelo:
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish1.jpg
 If(ErrorLevel == 0){
-	foundX := foundX + 5
-	foundY := foundY + 18
+	foundX := foundX + 0
+	foundY := foundY + 20
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
@@ -742,8 +742,8 @@ If(ErrorLevel == 0){
 }else{
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish2.jpg
 If(ErrorLevel == 0){
-	foundX := foundX + 5
-	foundY := foundY + 18
+	foundX := foundX + 0
+	foundY := foundY + 20
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
@@ -759,8 +759,8 @@ If(ErrorLevel == 0){
 }else{
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish3.jpg
 If(ErrorLevel == 0){
-	foundX := foundX + 5
-	foundY := foundY + 18
+	foundX := foundX + 0
+	foundY := foundY + 20
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
@@ -776,8 +776,8 @@ If(ErrorLevel == 0){
 }else{
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish4.jpg
 If(ErrorLevel == 0){
-	foundX := foundX + 5
-	foundY := foundY + 18
+	foundX := foundX + 0
+	foundY := foundY + 20
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
@@ -793,8 +793,8 @@ If(ErrorLevel == 0){
 }else{
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 fish5.jpg
 If(ErrorLevel == 0){
-	foundX := foundX + 5
-	foundY := foundY + 18
+	foundX := foundX + 0
+	foundY := foundY + 20
 	BackupClickX := foundX
 	BackupClickY := foundY
 	Click, %foundX%, %foundY%
