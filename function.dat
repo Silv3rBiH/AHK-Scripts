@@ -1,4 +1,4 @@
-; v1.3.18
+; v1.3.19
 ; fix shop
 ; hotfix
 ; fix sjemenke
@@ -700,11 +700,11 @@ If(ErrorLevel == 0){
 
 	if krug = 400
 	{
-	url:=%dislink% ; use the url from Discord webhook bot
+	url = %dislink% ; use the url from Discord webhook bot
 	postdata=
 	(
 	{
-	  "content": "<@%DiscordID%> Fish bot prestao sa radom %UserName% - Zakovalo!"
+	  "content": "<@%DiscordID%> Fish bot prestao sa radom %UserName% - Zakovalo na %upecao%!"
 	}
 	)
 	WebRequest := ComObjCreate("WinHttp.WinHttpRequest.5.1")
