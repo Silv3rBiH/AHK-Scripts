@@ -135,18 +135,5 @@ dislink1 := "https://discord.com/api/webhooks/"
 dislink2 := "857482777036062720/5kIl4yYt-5IebLjX6goDB-HunKFjzircuG69Zu-IOdswDFvXe63hDpo9UbDHXtyDQtvi"
 dislink = %dislink1%%dislink2%
 
-url:=%dislink% ; use the url from Discord webhook bot
-	postdata=
-	(
-	{
-	  "content": "<@%DiscordID%> Fish bot prestao sa radom %UserName% - Zakovalo!"
-	}
-	)
-	WebRequest := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-	WebRequest.Open("POST", url, false)
-	WebRequest.SetRequestHeader("Content-Type", "application/json")
-	WebRequest.Send(postdata)
-
-
 #Include *i postavke.txt
 #Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
