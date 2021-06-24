@@ -1,4 +1,4 @@
-; v1.3.0
+; v1.3.1
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
@@ -6,13 +6,14 @@ if not A_IsAdmin
 }
 #SingleInstance Force
 URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Silv3r_Hotkeys_V2.ahk,update.txt
-Sleep 2000
 FileReadLine, update, update.txt, 1
 FileReadLine, currentVersion, %A_ScriptName%, 1
+Sleep 1000
 	if (update = currentVersion) {
 	FileDelete, update.txt
 	} else {
 	FileCopy, update.txt, %A_ScriptName%, 1
+	Sleep 500
 	FileDelete, update.txt
 	msgbox, 0, Update uspijesan!, Update uspijesno obavljen, skripta ce se sada reloadati!
 	Reload
@@ -60,13 +61,14 @@ if FileExist("key.dll")
 	
 	if FileExist("postavke.txt") {
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/postavke.txt,postavke1.txt
-		sleep 2000
 		FileReadLine, updatep, postavke1.txt, 1
 		FileReadLine, currentVersionp, postavke.txt, 1
+		sleep 500
 		if (updatef = currentVersionf) {
 			FileDelete, postavke1.txt
 		}else{
 			FileCopy, postavke1.txt, postavke.txt, 1
+			Sleep 500
 			FileDelete, postavke1.txt
 			Reload
 			}
@@ -111,13 +113,14 @@ if FileExist("key.dll")
 		}
 
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/function.dat,function.dat
-		sleep 2500
 		FileReadLine, updatef, function.dat, 1
 		FileReadLine, currentVersionf, %A_AppDataCommon%\Silv3rHotkey\function.dat, 1
+		sleep 1500
 		if (updatef = currentVersionf) {
 		FileDelete, function.dat
 		} else {
 		FileCopy, function.dat, %A_AppDataCommon%\Silv3rHotkey\function.dat, 1
+		sleep 500
 		FileDelete, function.dat
 		Reload
 		}
@@ -128,8 +131,9 @@ if FileExist("key.dll")
 }
 
 #MaxThreadsPerHotkey 2
-SplashTextOn, 250, , Skripta Silv3r Hotkey uspijesno pokrenuta!
-Sleep 2000
-SplashTextOff
+dislink1 := "https://discord.com/api/webhooks/857482777036062720/5kIl4yYt-5IebLjX6goDB
+dislink2 := -HunKFjzircuG69Zu-IOdswDFvXe63hDpo9UbDHXtyDQtvi"
+dislink := %dislink1% & %dislink2%
+msgbox %dislink%
 #Include *i postavke.txt
 #Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
