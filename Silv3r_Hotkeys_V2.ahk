@@ -1,4 +1,4 @@
-; v1.3.1
+; v1.3.11
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
@@ -131,8 +131,8 @@ if FileExist("key.dll")
 }
 
 #MaxThreadsPerHotkey 2
-dislink1 := "https://discord.com/api/webhooks/857482777036062720/5kIl4yYt-5IebLjX6goDB
-dislink2 := -HunKFjzircuG69Zu-IOdswDFvXe63hDpo9UbDHXtyDQtvi"
+dislink1 := "https://discord.com/api/webhooks/857482777036062720/5kIl4yYt-5IebLjX6goDB"
+dislink2 := "-HunKFjzircuG69Zu-IOdswDFvXe63hDpo9UbDHXtyDQtvi"
 dislink := %dislink1% & %dislink2%
 msgbox %dislink%
 #Include *i postavke.txt
