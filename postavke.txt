@@ -1,4 +1,4 @@
-; v1.3.0
+; v1.3.1
 
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
 PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
@@ -85,6 +85,7 @@ Hotkey, %PronalazakKey%, Pronalazak
 Hotkey, %NePronalazakKey%, NePronalazak
 Hotkey, %GepekInventoriKey%, GepekInventori
 Hotkey, %GepekKey%, Gepek
+Hotkey, %UnequipKey%, Unequip
 Hotkey, %PripremaPecanjeKey%, PripremaPecanje
 Hotkey, %PecanjeKey%, Pecanje
 Hotkey, %KupovinaOpremeKey%, KupovinaOpreme
