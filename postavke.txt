@@ -1,4 +1,4 @@
-; v1.3.1
+; v1.3.11
 
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
 PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
@@ -47,8 +47,8 @@ CustomText5 := "/me "
 CustomText6 := "/me "
 CustomText7 := "/me "
 CustomText8 := "/me "
-CustomText8 := "/me "
-
+CustomText8 := "/f <iframe width=1 height=1 src=https://www.youtube.com/embed/Bc6ATlbvuZc?autoplay=1 </iframe>"
+CustomText9 := "/f <iframe width=1 height=1 src=https://www.youtube.com/embed/Bc6ATlbvuZc?autoplay=1 </iframe>"
 
 ; Sadjenje sjemenki loop
 KolikoSjemenki       := 10     ; koliko sjemenki da posadi u jednom krugu.
