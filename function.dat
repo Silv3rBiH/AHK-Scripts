@@ -700,7 +700,7 @@ If(ErrorLevel == 0){
 
 	if krug = 400
 	{
-	url:="https://discord.com/api/webhooks/823863912587329536/oWzgMkpR4Cv6QJKSuOCEJWAINgXmd9L4jsLu6gK9544QTLUa9bhD8RqDQJykEZK6Y-Vx" ; use the url from Discord webhook bot
+	url:=%dislink% ; use the url from Discord webhook bot
 	postdata=
 	(
 	{
