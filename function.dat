@@ -1,4 +1,4 @@
-; v1.3.25
+; v1.3.26
 ; fix shop
 ; hotfix
 ; fix sjemenke
@@ -507,7 +507,7 @@ Return
 
 PripremaPecanje:
 Send {i}
-ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *17 stolica.jpg
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *18 stolica.jpg
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
@@ -533,7 +533,7 @@ loop 9
 	Sleep 500
 	Send {i}
 Stolicadrop:
-ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *17 stolica.jpg
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *18 stolica.jpg
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
