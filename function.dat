@@ -1,8 +1,9 @@
-; v1.3.20
+; v1.3.21
 ; fix shop
 ; hotfix
 ; fix sjemenke
 ; fix jelo
+; fix stolica
 ;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
 ;    ...
 ;} else if (A_ScreenWidth = 1080 & A_ScreenHeight = 1024) {
@@ -506,7 +507,7 @@ Return
 
 PripremaPecanje:
 Send {i}
-ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *30 stolica.jpg
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *20 stolica.jpg
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
@@ -532,7 +533,7 @@ loop 9
 	Sleep 500
 	Send {i}
 Stolicadrop:
-ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *30 stolica.jpg
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *20 stolica.jpg
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
