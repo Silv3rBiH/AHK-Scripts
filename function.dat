@@ -1,4 +1,4 @@
-; v1.3.28
+; v1.3.29
 ; fix shop
 ; hotfix
 ; fix sjemenke
@@ -55,6 +55,8 @@ Gui, 1:Show
 }else{
 Crosshair := 0
 Gui, 1:Hide
+}
+Return
 
 CustomTextCall1:
 Send {t}
