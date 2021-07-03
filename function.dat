@@ -1,4 +1,4 @@
-; v1.3.27
+; v1.3.28
 ; fix shop
 ; hotfix
 ; fix sjemenke
@@ -33,12 +33,28 @@ ProcExist(PID_or_Name=""){
     Return Errorlevel
 }
 
+Gui, 1:Color, ffffff
+Gui, +LastFound +AlwaysOnTop +ToolWindow -Caption
+WinSet, TransColor, ffffff
+Gui, 1:Add, Picture, x11 y46 w14 h14, dot.png
+Crosshair := 0
+Gui, 1:Hide
+
 PrikaziSveKomande:
 	SoundBeep 150 , 150
 	SplashTextOn, 435, 375 , SVE KOMANDE, `n ALT+1 ILI NUMPAD 1 = PRETRES I OVJERAVANJE AKO OSOBA LEŽI`n ALT+2 ILI NUMPAD 2 = PRETRES AKO OSOBA LEŽI`n ALT+3 ILI NUMPAD 3 = PRETRES AKO JE DIGAO RUKE`n ALT+4 ILI NUMPAD 4 = OVJERAVA OSOBU`n ALT+5 ILI NUMPAD 5 = DIZANJE POVRIJEDJENE OSOBE S PODA`n ALT+6 ILI NUMPAD 6 = ODUZIMANJE KOMUNIKACIJE`n ALT+7 ILI NUMPAD 7 = AKO SI PRONASAO NESTO`n ALT+8 ILI NUMPAD 8 = AKO NISI PRONASAO NISTA`n ALT+Q = BRZI UNEQUIP ORUZJA`n ALT+I = BRZO OTKLJUCAVANJE I OTVARANJE GEPEKA U AUTU`n ALT+L = BRZO OTKLJUCAVANJE/ZAKLJUCAVANJE GEPEKA`n UP = PALI AUTO-VEŽE POJAS-ZAKLJUCAVA AUTO`n`n F11 = AUTOMATSKO RUDARENJE`n F12 = AFK KRETANJE`n`n`n MADE BY SILV3R BIH (Silvio Suljić)
 	Sleep, 5000
 	SplashTextOff
 Return
+
+CrosshairShow:
+if Crosshair = 0
+{
+Crosshair := 1
+Gui, 1:Show
+}else{
+Crosshair := 0
+Gui, 1:Hide
 
 CustomTextCall1:
 Send {t}
