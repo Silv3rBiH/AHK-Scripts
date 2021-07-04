@@ -111,6 +111,11 @@ if FileExist("key.dll")
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/voda.jpg,voda.jpg
 		Sleep 200
 		}
+	if FileExist("dot.png") {
+		}else{
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/dot.png,dot.png
+		Sleep 200
+		}
 
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/function.dat,function.dat
 		FileReadLine, updatef, function.dat, 1
