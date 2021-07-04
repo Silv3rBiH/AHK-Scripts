@@ -24,6 +24,8 @@ RudarenjeKey                  := "!r"     ; HOTKEY ZA RUDARENJE MODE            
 SadjenjeKey                   := "!s"     ; HOTKEY ZA SADJENJE TRAVE                   - DEFAULT "ALT + S"
 DorucakKey                    := "!j"     ; HOTKEY ZA BRZI DORUCAK                     - DEFAULT "ALT + J"
 
+HudShowHideKey                := "F11"    ; HOTKEY ZA PRIKAZ SKRIVANJE CROSSHAIRA      - DEFAULT "F11"
+
 QuickRelogKey                 := "!F12"   ; HOTKEY ZA RELOG RAGEMP                     - DEFAULT "ALT + F12"
 ReloadKey                     := "F12"    ; HOTKEY ZA RELOAD SKRIPTE                   - DEFAULT "F12"
 ReloadKey2                    := "!F9"    ; BACKUP HOTKEY ZA RELOAD SKRIPTE            - DEFAULT "ALT + F9"
@@ -38,17 +40,17 @@ CustomTextCall7Key            := "^+7"     ; HOTKEY ZA CUSTOM TEXT 7            
 CustomTextCall8Key            := "^+8"     ; HOTKEY ZA CUSTOM TEXT 8                   - DEFAULT "CTRL + SHIFT + 8"
 CustomTextCall9Key            := "^+9"     ; HOTKEY ZA CUSTOM TEXT 9                   - DEFAULT "CTRL + SHIFT + 9"
 
+
 ; CustomText (Mijenjajte po volji custom text koristi od SHIFT+1 DO SHIFT+9 za slanje podesivog texta u chat, postavit cu neke primjere slobodni ste da promijenite)
 CustomText1 := "/me Pokazuje prstom na auto"
 CustomText2 := "/ads Kupujem nitro gas placam dobro"
-CustomText3 := "/ads Kupujem steel na veliko"
-CustomText4 := "/me "
-CustomText5 := "/me "
-CustomText6 := "/me "
-CustomText7 := "/me "
-CustomText8 := "/me "
-CustomText8 := "/f <iframe width=1 height=1 src=https://www.youtube.com/embed/Bc6ATlbvuZc?autoplay=1 </iframe>"
-CustomText9 := "/f <iframe width=1 height=1 src=https://www.youtube.com/embed/Bc6ATlbvuZc?autoplay=1 </iframe>"
+CustomText3 := "/f"
+CustomText4 := "/f"
+CustomText5 := "/f"
+CustomText6 := "/f"
+CustomText7 := "/f"
+CustomText8 := "/f"
+CustomText9 := "/f"
 
 ; Sadjenje sjemenki loop
 KolikoSjemenki       := 10     ; koliko sjemenki da posadi u jednom krugu.
@@ -60,7 +62,6 @@ IntF5MenuDelay       := 800    ; pauza (u ms) koliko treba da vam otvori F5 menu
 IntChatDelay         := 1000   ; pauza (u ms) koliko treba da posalje poruku. (najbolje po malo pojacavati ako se uoci greska)
 IntInventoryDelay    := 2200   ; pauza (u ms) pauza (u ms) koliko treba da vam otvori inventory.
 IntFishDelay         := 600    ; pauza (u ms) koliko treba pauze izmedju clicka na ribu za pecanje. (najmanja moguca je 600ms ispod ce pucat udice, pojacavati po 100ms)
-
 
 
 ; Hotkey mapping (ovo ne drkajte bez mog ovlastenja sjebat cete skriptu, hvala)
@@ -95,7 +96,15 @@ Hotkey, %SadjenjeKey%, Sadjenje
 Hotkey, %DorucakKey%, Dorucak
 Hotkey, %QuickRelogKey%, QuickRelog
 Hotkey, %ReloadKey%, Reload
-Return
+Hotkey, %HudShowHideKey%, CrosshairShow
 
+Gui, 1:Color, ffffff
+Gui, +LastFound +AlwaysOnTop +ToolWindow -Caption
+WinSet, TransColor, ffffff
+Gui, 1:Add, Picture, x11 y46 w14 h14, dot.png
+Crosshair := 0
+Gui, 1:Hide
+
+Return
 
 !F9:: reload
