@@ -10,6 +10,13 @@
 ;    ...
 ;}
 
+Gui, 1:Color, ffffff
+Gui, +LastFound +AlwaysOnTop +ToolWindow -Caption
+WinSet, TransColor, ffffff
+Gui, 1:Add, Picture, x11 y46 w14 h14, dot.png
+Crosshair := 0
+Gui, 1:Hide
+
 Process_Suspend(PID_or_Name){
     PID := (InStr(PID_or_Name,".")) ? ProcExist(PID_or_Name) : PID_or_Name
     h:=DllCall("OpenProcess", "uInt", 0x1F0FFF, "Int", 0, "Int", pid)
@@ -41,12 +48,6 @@ PrikaziSveKomande:
 Return
 
 CrosshairShow:
-Gui, 1:Color, ffffff
-Gui, +LastFound +AlwaysOnTop +ToolWindow -Caption
-WinSet, TransColor, ffffff
-Gui, 1:Add, Picture, x11 y46 w14 h14, dot.png
-Crosshair := 0
-Gui, 1:Hide
 if Crosshair = 0
 {
 Crosshair := 1
