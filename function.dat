@@ -1,4 +1,4 @@
-; v1.4
+; v1.41
 ; Casino
 ; fix shop
 ; hotfix
@@ -520,7 +520,7 @@ return
 
 CasinoCrvena:
 WinActivate, ahk_exe GTA5.exe
-InputBox, UserInput, Unesi ulog na crnu:, Unesi ulog na crnu:, , 200, 100
+InputBox, UserInput, Unesi ulog na crvenu:, Unesi ulog na crvenu:, , 200, 100
 if ErrorLevel
     MsgBox, Prekinuli ste ulog.
 else
