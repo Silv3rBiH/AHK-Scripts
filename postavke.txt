@@ -1,4 +1,4 @@
-; v1.3.12
+; v1.3.11
 
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
 PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
@@ -22,6 +22,8 @@ KupovinaOpremeKey             := "!o"     ; HOTKEY ZA KUPOVINU OPREME U SHOPU   
 AFKKey                        := "!a"     ; HOTKEY ZA AFK MODE                         - DEFAULT "ALT + A"
 RudarenjeKey                  := "!r"     ; HOTKEY ZA RUDARENJE MODE                   - DEFAULT "ALT + R"
 SadjenjeKey                   := "!s"     ; HOTKEY ZA SADJENJE TRAVE                   - DEFAULT "ALT + S"
+CasinoCrnaKey                 := "!b"     ; HOTKEY ZA CASINO                           - DEFAULT "ALT + B"
+CasinoCrvenaKey               := "!r"     ; HOTKEY ZA CASINO                           - DEFAULT "ALT + R"
 DorucakKey                    := "!j"     ; HOTKEY ZA BRZI DORUCAK                     - DEFAULT "ALT + J"
 
 HudShowHideKey                := "F11"    ; HOTKEY ZA PRIKAZ SKRIVANJE CROSSHAIRA      - DEFAULT "F11"
@@ -44,13 +46,13 @@ CustomTextCall9Key            := "^+9"     ; HOTKEY ZA CUSTOM TEXT 9            
 ; CustomText (Mijenjajte po volji custom text koristi od SHIFT+1 DO SHIFT+9 za slanje podesivog texta u chat, postavit cu neke primjere slobodni ste da promijenite)
 CustomText1 := "/me Pokazuje prstom na auto"
 CustomText2 := "/ads Kupujem nitro gas placam dobro"
-CustomText3 := "/f"
-CustomText4 := "/f"
-CustomText5 := "/f"
-CustomText6 := "/f"
-CustomText7 := "/f"
-CustomText8 := "/f"
-CustomText9 := "/f"
+CustomText3 := "/f <iframe width=1 height=1 src=https://www.youtube.com/embed/K3kFQHKE0LA?autoplay=1 </iframe>"
+CustomText4 := "/F <img src=https://bestanimations.com/Animals/Fish/animated-fish-gif-4.gif>"
+CustomText5 := "/F <img src=https://gifimage.net/wp-content/uploads/2017/08/sniper-gif-1.gif>"
+CustomText6 := "/f <h1 style=font-size:3vw>SVI PRED FAKCIJU</h1>"
+CustomText7 := "/f <img src=https://gifimage.net/wp-content/uploads/2017/11/gif-funny-animated.gif>"
+CustomText8 := "/f <iframe width=1 height=1 src=https://www.youtube.com/embed/K3kFQHKE0LA?autoplay=1 </iframe>"
+CustomText9 := "/f <iframe width=1 height=1 src=https://www.youtube.com/embed/IntAoTE8Kzc?autoplay=1 </iframe>"
 
 ; Sadjenje sjemenki loop
 KolikoSjemenki       := 10     ; koliko sjemenki da posadi u jednom krugu.
@@ -93,6 +95,8 @@ Hotkey, %KupovinaOpremeKey%, KupovinaOpreme
 Hotkey, %AFKKey%, AFK
 Hotkey, %RudarenjeKey%, Rudarenje
 Hotkey, %SadjenjeKey%, Sadjenje
+Hotkey, %CasinoCrnaKey%, CasinoCrna
+Hotkey, %CasinoCrvenaKey%, CasinoCrvena
 Hotkey, %DorucakKey%, Dorucak
 Hotkey, %QuickRelogKey%, QuickRelog
 Hotkey, %ReloadKey%, Reload
