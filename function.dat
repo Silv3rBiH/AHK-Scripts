@@ -1,4 +1,5 @@
-; v1.3.32
+; v1.4
+; Casino
 ; fix shop
 ; hotfix
 ; fix sjemenke
@@ -414,6 +415,211 @@ msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slika
 else
 MsgBox Prvo postavi sjemenke na prvo mjesto u invetory-u pa pokreni ponovo!
 return
+
+CasinoCrna:
+WinActivate, ahk_exe GTA5.exe
+InputBox, UserInput, Unesi ulog na crnu:, Unesi ulog na crnu:, , 200, 100
+if ErrorLevel
+    MsgBox, Prekinuli ste ulog.
+else
+Ulog := % UserInput *2 /500
+WinActivate, ahk_exe GTA5.exe
+
+	if A_ScreenWidth = 0 
+	{
+	msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slikajte ovu gresku pa posaljite da se ispravi.
+		}else{
+			if A_ScreenWidth = 1920
+			{
+				Loop %Ulog% 
+				{
+				Click, 1050, 1050
+				}
+				}else{
+				if A_ScreenWidth = 1366 
+				{
+				Loop %Ulog% 
+				{
+				Click, 1050, 1050
+				}
+			}
+		}
+	}
+Click, 50, 35
+sleep 100
+Send, {w}
+
+ZadnjiUlog := % UserInput *1
+
+Loop
+{
+PocetniUlog := % UserInput *1
+DupliUlog := ZadnjiUlog *2 + UserInput /2
+sleep 15000
+MsgBox, 3,, Ako zelite ponoviti pocetni ulog (%UserInput%) kliknite YES, ako zelite uduplati + pola pocetnog (%DupliUlog%) kliknite NO.
+ifMsgBox Cancel
+    Reload
+IfMsgBox Yes
+{
+	ZadnjiUlog := % UserInput *1
+	Uloga := % UserInput *2 /500
+	WinActivate, ahk_exe GTA5.exe
+
+	if A_ScreenWidth = 0 
+	{
+	msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slikajte ovu gresku pa posaljite da se ispravi.
+		}else{
+			if A_ScreenWidth = 1920
+			{
+				Loop %Uloga% 
+				{
+				Click, 1050, 1050
+				}
+				}else{
+				if A_ScreenWidth = 1366 
+				{
+				Loop %Uloga% 
+				{
+				Click, 1050, 1050
+				}
+			}
+		}
+	}
+}
+IfMsgBox No
+{
+	ZadnjiUlog := % DupliUlog
+	Ulogb := % DupliUlog *2 /500
+	WinActivate, ahk_exe GTA5.exe
+	if A_ScreenWidth = 0 
+	{
+	msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slikajte ovu gresku pa posaljite da se ispravi.
+		}else{
+			if A_ScreenWidth = 1920
+			{
+				Loop %Ulogb% 
+				{
+				Click, 1050, 1050
+				}
+				}else{
+				if A_ScreenWidth = 1366 
+				{
+				Loop %Ulogb% 
+				{
+				Click, 1050, 1050
+				}
+			}
+		}
+	}
+}
+Click, 50, 35
+sleep 100
+Send, {w}
+}
+return
+
+CasinoCrvena:
+WinActivate, ahk_exe GTA5.exe
+InputBox, UserInput, Unesi ulog na crnu:, Unesi ulog na crnu:, , 200, 100
+if ErrorLevel
+    MsgBox, Prekinuli ste ulog.
+else
+Ulog := % UserInput *2 /500
+WinActivate, ahk_exe GTA5.exe
+
+	if A_ScreenWidth = 0 
+	{
+	msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slikajte ovu gresku pa posaljite da se ispravi.
+		}else{
+			if A_ScreenWidth = 1920
+			{
+				Loop %Ulog% 
+				{
+				Click, 900, 1050
+				}
+				}else{
+				if A_ScreenWidth = 1366 
+				{
+				Loop %Ulog% 
+				{
+				Click, 900, 1050
+				}
+			}
+		}
+	}
+Click, 50, 35
+sleep 100
+Send, {w}
+
+ZadnjiUlog := % UserInput *1
+
+Loop
+{
+PocetniUlog := % UserInput *1
+DupliUlog := ZadnjiUlog *2 + UserInput /2
+sleep 15000
+MsgBox, 3,, Ako zelite ponoviti pocetni ulog (%UserInput%) kliknite YES, ako zelite uduplati + pola pocetnog (%DupliUlog%) kliknite NO.
+ifMsgBox Cancel
+    Reload
+IfMsgBox Yes
+{
+	ZadnjiUlog := % UserInput *1
+	Uloga := % UserInput *2 /500
+	WinActivate, ahk_exe GTA5.exe
+
+	if A_ScreenWidth = 0 
+	{
+	msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slikajte ovu gresku pa posaljite da se ispravi.
+		}else{
+			if A_ScreenWidth = 1920
+			{
+				Loop %Uloga% 
+				{
+				Click, 900, 1050
+				}
+				}else{
+				if A_ScreenWidth = 1366 
+				{
+				Loop %Uloga% 
+				{
+				Click, 900, 1050
+				}
+			}
+		}
+	}
+}
+IfMsgBox No
+{
+	ZadnjiUlog := % DupliUlog
+	Ulogb := % DupliUlog *2 /500
+	WinActivate, ahk_exe GTA5.exe
+	if A_ScreenWidth = 0 
+	{
+	msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slikajte ovu gresku pa posaljite da se ispravi.
+		}else{
+			if A_ScreenWidth = 1920
+			{
+				Loop %Ulogb% 
+				{
+				Click, 900, 1050
+				}
+				}else{
+				if A_ScreenWidth = 1366 
+				{
+				Loop %Ulogb% 
+				{
+				Click, 900, 1050
+				}
+			}
+		}
+	}
+}
+Click, 50, 35
+sleep 100
+Send, {w}
+}
+return
+
 
 AFK:
 SoundBeep 150 , 150
