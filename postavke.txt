@@ -1,6 +1,8 @@
-; v1.3.11
+; v1.4
+; CASINO
 
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
+
 PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
 
 PretresOvjeravanjeKey         := "!1"     ; HOTKEY ZA PRETRES I OVJERAVANJE AKO LEZI   - DEFAULT "ALT + 1"
