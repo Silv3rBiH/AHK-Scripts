@@ -3,7 +3,7 @@
 ; CASINO
 
 ; Unesi password ako zelis da poslije reloga sam loguje
-password := "Nark0s?!"
+password := "ovdje upisi svoj password"
 
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
 PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
