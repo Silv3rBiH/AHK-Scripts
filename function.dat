@@ -949,8 +949,7 @@ If(ErrorLevel == 0){
 	Goto, pocetak
 	}
 
-	;if krug = 300
-	if krug = 100
+	if krug = 300
 	{
 	url = %dislink% ; use the url from Discord webhook bot
 	postdata=
