@@ -1,4 +1,4 @@
-; v1.3.15
+; v1.4
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
@@ -111,6 +111,16 @@ if FileExist("key.dll")
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/voda.jpg,voda.jpg
 		Sleep 200
 		}
+	if FileExist("dreamworldisopen.jpg") {
+		}else{
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/dreamworldisopen.jpg,dreamworldisopen.jpg
+		Sleep 200
+		}
+	if FileExist("dreamworld.jpg") {
+		}else{
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/dreamworld.jpg,dreamworld.jpg
+		Sleep 200
+		}
 	if FileExist("dot.png") {
 		}else{
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/dot.png,dot.png
@@ -136,9 +146,12 @@ if FileExist("key.dll")
 }
 
 #MaxThreadsPerHotkey 2
+
 dislink1 := "https://discord.com/api/webhooks/"
 dislink2 := "857482777036062720/5kIl4yYt-5IebLjX6goDB-HunKFjzircuG69Zu-IOdswDFvXe63hDpo9UbDHXtyDQtvi"
 dislink = %dislink1%%dislink2%
 
+#Include *i password.txt
 #Include *i postavke.txt
-#Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
+;#Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
+#Include *i functiontest.dat
