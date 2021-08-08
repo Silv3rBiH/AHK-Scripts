@@ -1,5 +1,6 @@
-; v1.41
+; v1.412
 
+;stolica
 ;Relog
 ; Casino
 ; fix shop
@@ -729,7 +730,7 @@ If WinExist("ahk_exe GTA5.exe")
 {
 MouseMove, 0, 2000, 1, R
 Send {i}
-ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *18 stolica.jpg
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *15 stolica.jpg
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
@@ -756,7 +757,7 @@ loop 7
 MouseMove, 0, 2000, 1, R
 	Send {i}
 Stolicadrop:
-ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *18 stolica.jpg
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *15 stolica.jpg
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
