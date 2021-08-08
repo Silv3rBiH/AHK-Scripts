@@ -1,10 +1,9 @@
-; v1.5
-; Relog poslije Disconecta
+; v1.4
 ; CASINO
 
-; Unesi password ako zelis da poslije reloga sam loguje
-password := "ovdje upisi svoj password"
 
+password := "Ovdje upisi password"
+RAGEMP   := "C:\RAGEMP"
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
 PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
 
@@ -50,7 +49,7 @@ CustomTextCall9Key            := "^+9"     ; HOTKEY ZA CUSTOM TEXT 9            
 
 ; CustomText (Mijenjajte po volji custom text koristi od SHIFT+1 DO SHIFT+9 za slanje podesivog texta u chat, postavit cu neke primjere slobodni ste da promijenite)
 CustomText1 := "/me Pokazuje prstom na auto"
-CustomText2 := ""
+CustomText2 := "/ads Kupujem nitro gas placam dobro"
 CustomText3 := ""
 CustomText4 := ""
 CustomText5 := ""
