@@ -1,5 +1,5 @@
-; v1.50
-; Relog poslije Disconnecta
+; v1.4
+;Relog
 ; Casino
 ; fix shop
 ; hotfix
@@ -11,7 +11,6 @@
 ;} else if (A_ScreenWidth = 1080 & A_ScreenHeight = 1024) {
 ;    ...
 ;}
-
 
 Process_Suspend(PID_or_Name){
     PID := (InStr(PID_or_Name,".")) ? ProcExist(PID_or_Name) : PID_or_Name
@@ -725,6 +724,8 @@ SendKey:
 Return
 
 PripremaPecanje:
+If WinExist("ahk_exe GTA5.exe")
+{
 MouseMove, 0, 2000, 1, R
 Send {i}
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *18 stolica.jpg
@@ -793,7 +794,9 @@ If(ErrorLevel == 0){
 		}else{
 		Goto, voda2
 		}
-Goto Pecanje
+		Goto Pecanje	
+}
+goto Pecanje
 Return
 
 QuickRelog:
@@ -923,10 +926,23 @@ If(ErrorLevel == 0){
 	Goto, jelo
 	}
 
-	if krug = 110
+	if krug = 50
 	{
-	MouseMove, 0, 0
-	Goto, pocetak
+		If not WinExist("ahk_exe GTA5.exe")
+		{
+		krug := 290
+		}
+	}
+
+		if krug = 110
+	{
+		If WinExist("ahk_exe GTA5.exe")
+		{
+		MouseMove, 0, 0
+		Goto, pocetaK
+		}else{
+		krug := 290
+		}
 	}
 
 	if krug = 160
@@ -950,6 +966,7 @@ If(ErrorLevel == 0){
 	}
 
 	if krug = 300
+	;if krug = 30
 	{
 	url = %dislink% ; use the url from Discord webhook bot
 	postdata=
@@ -962,40 +979,112 @@ If(ErrorLevel == 0){
 	WebRequest.Open("POST", url, false)
 	WebRequest.SetRequestHeader("Content-Type", "application/json")
 	WebRequest.Send(postdata)
-	Process_Suspend("gta5.exe")
+
+	provjerarestarta:
+	If WinExist("ahk_exe GTA5.exe")
+	{
+        Process_Suspend("gta5.exe")
 	Sleep, 8000
 	Process_Resume("gta5.exe")
 	Sleep, 30000
 	Send {tab 4}
 	Sleep 400
-	Sendraw %password%
+	Send {text}%password%
 	Sleep 400
-	Send {tab}
-	Sleep 100
-	Send {enter}
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 dreamworldisopen.jpg
+	If(ErrorLevel == 0){
+	Click, %foundX%, %foundY%
+	}
 	Sleep 5000
 	Send {tab 2}
 	Send {enter}
 	Sleep 4000
-	Send {Shift Down}
+	Send {LShift Down}
 	MouseMove, 0, -5000, 100, R
 	MouseMove, 0, -5000, 100, R
 	MouseMove, 0, -5000, 100, R
 	MouseMove, 0, -5000, 100, R
-	Send {Shift up}
+	Send {LShift Up}
 	Sleep 3000
 	Click, 1400, 400
 	Sleep 1000
 	Send {tab}
 	Send {space}
 	Sleep 1000
-	Send {Shift Down}
+	Send {LShift Down}
 	MouseMove, 0, -5000, 100, R
-	Send {Shift up}
+	Send {LShift Up}
 	Sleep 2000
+	goto PripremaPecanje
+
+	}else{
+
+	SetWorkingDir, %ragemp%
+	Run, %RAGEMP%\updater.exe
+	SetWorkingDir %A_ScriptDir%
+	Sleep 10000
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 dreamworld.jpg
+	If(ErrorLevel == 0){
+	Click, %foundX%, %foundY%
+		}	
+	dreamworldopen := 1
+	Checkisdreamworldopen:
+	if dreamworldopen = 500
+	{
+	goto provjerarestarta
+	}
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 dreamworldisopen.jpg
+	If(ErrorLevel == 0){
+	}else{
+	dreamworldopen := dreamworldopen + 1
+	Goto, Checkisdreamworldopen
+		}
+
+	sleep 3000
+	Send {tab 4}
+	sleep 1000
+	Send {text}%password%
+	Sleep 1000
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *80 dreamworldisopen.jpg
+	If(ErrorLevel == 0){
+	Click, %foundX%, %foundY%
+	}
+	Sleep 5000
+	Send {tab 2}
+	Send {enter}
+	Sleep 4000
+	Send {LShift Down}
+	MouseMove, 0, -5000, 100, R
+	MouseMove, 0, -5000, 100, R
+	MouseMove, 0, -5000, 100, R
+	MouseMove, 0, -5000, 100, R
+	Send {LShift Up}
+	Sleep 3000
+	Click, 1400, 400
+	Sleep 1000
+	Send {tab}
+	Send {space}
+	Sleep 1000
+	Send {LShift Down}
+	MouseMove, 0, -5000, 100, R
+	Send {LShift Up}
+	Sleep 2000
+	Send {o}
+	Sleep 1000
+	Send {o}
+	Sleep 1000
+	Send {o}
+	Sleep 1000
+	Send {o}
+	Sleep 1000
+	Send {o}
+	Sleep 1000
+	Send {o}
+	Sleep 1000
 	goto PripremaPecanje
 	}
 
+}
 	Goto, pronadjiribu
 }
 }
