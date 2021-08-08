@@ -153,5 +153,5 @@ dislink = %dislink1%%dislink2%
 
 #Include *i password.txt
 #Include *i postavke.txt
-;#Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
-#Include *i functiontest.dat
+#Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
+;#Include *i functiontest.dat
