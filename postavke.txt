@@ -1,4 +1,5 @@
-; v1.67
+; v1.671
+
 
 Password := "Ovdje upiši password" ; Password je potreban da bi skripta uradila relog
 RAGEMP   := "C:\RAGEMP" ; Lokacija RAGEMP foldera na racunaru
