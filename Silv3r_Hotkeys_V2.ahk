@@ -1,4 +1,4 @@
-; v1.6
+; v1.61
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
@@ -160,6 +160,7 @@ dislink = %dislink1%%dislink2%
 
 if FileExist("functiontest.dat") {
 	#Include *i functiontest.dat
+	FileDelete, %A_AppDataCommon%\Silv3rHotkey\function.dat
 	}else{
 	#Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
 	}
