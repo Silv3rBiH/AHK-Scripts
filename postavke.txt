@@ -1,7 +1,7 @@
-; v1.6
+; v1.65
 
-Password := "Ovdje upisi password" ; Password je potreban da bi skripta uradila relog
-RAGEMP   := "C:\RAGEMP" ; Lokacija RAGEMP foldera na racunaru
+Password := "Nark0s?!" ; Password je potreban da bi skripta uradila relog
+RAGEMP   := "D:\Program Files\RAGEMP" ; Lokacija RAGEMP foldera na racunaru
 
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
 PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
@@ -69,12 +69,12 @@ IntInventoryDelay    := 2200   ; pauza (u ms) pauza (u ms) koliko treba da vam o
 IntFishDelay         := 600    ; pauza (u ms) koliko treba pauze izmedju clicka na ribu za pecanje. (najmanja moguca je 600ms ispod ce pucat udice, pojacavati po 100ms)
 
 ; Tolerancija na pretragu slika (Obicno ne treba mijenjati ovo, u slucaju nekih problema pokušati s promjenama)
-FishTolerance                 := *80
-SendvicTolerance              := *50
-VodaTolerance                 := *65
-StolicaTolerance              := *15
-DreamworldisopenTolerance     := *80
-DreamworldTolerance           := *80
+FishTolerance                 := 80
+SendvicTolerance              := 50
+VodaTolerance                 := 65
+StolicaTolerance              := 15
+DreamworldisopenTolerance     := 80
+DreamworldTolerance           := 80
 
 
 ; Hotkey mapping (ovo ne drkajte bez mog ovlastenja sjebat cete skriptu, hvala)
