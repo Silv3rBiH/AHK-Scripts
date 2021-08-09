@@ -1,4 +1,4 @@
-; v1.61
+; v1.65
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
@@ -131,6 +131,8 @@ if FileExist("key.dll")
 		Sleep 300
 		}
 
+		if FileExist("functiontest.dat") {
+		}else{
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/function.dat,function.dat
 		sleep 1500
 		FileReadLine, updatef, function.dat, 1
@@ -142,6 +144,7 @@ if FileExist("key.dll")
 		sleep 500
 		FileDelete, function.dat
 		Reload
+		}
 		}
 	}else{
 		Msgbox Skripta nije uspijesno pokrenuta, kontaktirajte kreatora. `n`n ERROR %A_ComputerName%
@@ -157,10 +160,6 @@ dislink = %dislink1%%dislink2%
 
 #Include *i password.txt
 #Include *i postavke.txt
+#Include *i functiontest.dat
+#Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
 
-if FileExist("functiontest.dat") {
-	#Include *i functiontest.dat
-	FileDelete, %A_AppDataCommon%\Silv3rHotkey\function.dat
-	}else{
-	#Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
-	}
