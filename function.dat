@@ -1,4 +1,4 @@
-; v1.671
+; v1.673
 ;Patch Notes:
 
 ;tolerance
@@ -731,8 +731,7 @@ Return
 
 
 PripremaPecanje:
-FormatTime, TimeString,, LongDate
-FileAppend, %TimeString% - Pocelo pripremanje pecanja.`n, errorlog.txt
+FileAppend, %Datum% - Pocelo pripremanje pecanja.`n, errorlog.txt
 stolicacheck := 0
 If WinExist("ahk_exe GTA5.exe")
 {
@@ -751,6 +750,7 @@ If(ErrorLevel == 0){
 		{
 		stolicacheck := 0
 		MsgBox, 0, , Nemate stolica u inventoriu skripta ce preskocit dropanje stolica., 5
+		FileAppend, %Datum% - Stolice nisu pronadjene PRESKOCIO.`n, errorlog.txt
 		goto NemaStolica
 		}else{
 		goto DropStolica
@@ -789,6 +789,7 @@ If(ErrorLevel == 0){
 		{
 		CheckStolica := 0
 		MsgBox, 0, , Nemate stolica u inventoriu skripta ce preskocit dropanje stolica., 5
+		FileAppend, %Datum% - Stolice nisu pronadjene PRESKOCIO.`n, errorlog.txt
 		goto NemaStolica
 		}else{
 		goto StolicaDrop
@@ -817,8 +818,7 @@ If(ErrorLevel == 0){
 			{
 			sendvic2check := 0
 			MsgBox, 0, , Skripta nije mogla pronaci sendvic u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen., 5
-			FormatTime, TimeString,, LongDate
-			FileAppend, %TimeString% - Skripta nije pronašla sendvic.`n, errorlog.txt
+			FileAppend, %Datum% - Sendvic nije pronadjen RELOG.`n, errorlog.txt
 			goto QuickRelog
 			}else{
 			goto sendvic2
@@ -845,6 +845,7 @@ If(ErrorLevel == 0){
 			{
 			voda2check := 0
 			MsgBox, 0, , Skripta nije mogla pronaci vodu u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen., 5
+			FileAppend, %Datum% - Voda nije pronadjena RELOG.`n, errorlog.txt
 			goto QuickRelog
 			}else{
 			goto voda2
@@ -856,12 +857,14 @@ goto Pecanje
 Return
 
 QuickRelog:
+FileAppend, %Datum% - Pokrenut QuickRelog-ALT+F12.`n, errorlog.txt
 Process_Suspend("gta5.exe")
 Sleep, 8000
 Process_Resume("gta5.exe")
 Return
 
 Reload:
+FileAppend, %Datum% - Zaustavljena skripta - upecao %upecao% ribe.`n, errorlog.txt
 Reload
 Return
 
@@ -870,6 +873,7 @@ Return
 ; ===========================================================================
 
 Pecanje:
+FileAppend, %Datum% - Pokrenuto pecanje-F9.`n, errorlog.txt
 Sleep 1000
 mouseclick = 0
 mousemove = 0
@@ -987,6 +991,7 @@ If(ErrorLevel == 0){
 	{
 		If not WinExist("ahk_exe GTA5.exe")
 		{
+		FileAppend, %Datum% - Nije pronadjena riba jer GTA nije bio upaljen.`n, errorlog.txt
 		krug := 299
 		}
 	}
@@ -995,9 +1000,11 @@ If(ErrorLevel == 0){
 	{
 		If WinExist("ahk_exe GTA5.exe")
 		{
+		FileAppend, %Datum% - Krug 110-MouseMove.`n, errorlog.txt
 		MouseMove, 0, 0
 		Goto, pocetaK
 		}else{
+		FileAppend, %Datum% - Nije pronadjena riba jer GTA nije bio upaljen.`n, errorlog.txt
 		krug := 290
 		}
 	}
@@ -1005,6 +1012,7 @@ If(ErrorLevel == 0){
 	if krug = 160
 	{
 	MouseMove, 0, 0
+	FileAppend, %Datum% - Krug 160-BackupClick.`n, errorlog.txt
 	Click, %BackupClickX%, %BackupClickY%
 	Goto, pocetak
 	}
@@ -1012,18 +1020,21 @@ If(ErrorLevel == 0){
 	if krug = 220
 	{
 	MouseMove, 0, 0
+	FileAppend, %Datum% - Krug 220-BackupClick 2nd try.`n, errorlog.txt
 	Click, %BackupClickX%, %BackupClickY%
 	Goto, pocetak
 	}
 
 	if krug = 280
 	{
+	FileAppend, %Datum% - Krug 280-MouseMove 2nd try.`n, errorlog.txt
 	MouseMove, 0, 0
 	Goto, pocetak
 	}
 
 	if krug = 300
 	fishingstoped:
+	FileAppend, %Datum% - Zakovalo na %upecao%.`n, errorlog.txt
 	{
 	url = %dislink% ; use the url from Discord webhook bot
 	postdata=
@@ -1040,6 +1051,7 @@ If(ErrorLevel == 0){
 	provjerarestarta:
 	If WinExist("ahk_exe GTA5.exe")
 	{
+	FileAppend, %Datum% - Pokušava QuickRelog pa login te nastavljanje pecanja.`n, errorlog.txt
         Process_Suspend("gta5.exe")
 	Sleep, 8000
 	Process_Resume("gta5.exe")
@@ -1087,7 +1099,8 @@ If(ErrorLevel == 0){
 	goto PripremaPecanje
 
 	}else{
-
+	
+	FileAppend, %Datum% - Pokušava pokrenut RAGEMP odabrat server te logovat i nastavit pecat`n, errorlog.txt
 	SetWorkingDir, %ragemp%
 	Run, %RAGEMP%\updater.exe
 	SetWorkingDir %A_ScriptDir%
@@ -1161,6 +1174,7 @@ If(ErrorLevel == 0){
 }
 
 jelo:
+FileAppend, %Datum% - Jelo nakon 500 uspjesnih pecanja.`n, errorlog.txt
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%FishTolerance% fish1.jpg
 If(ErrorLevel == 0){
 	foundX := foundX + 0
