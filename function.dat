@@ -1,4 +1,4 @@
-; v2.0
+; v2.1
 ;Patch Notes:
 
 
@@ -1083,7 +1083,8 @@ If(ErrorLevel == 0){
 	Click, %foundX%, %foundY%
 	}
 	Sleep 5000
-	Send {tab 2}
+	Send {tab %Usernumber%}
+	Sleep 500
 	Send {enter}
 	Sleep 4000
 	Send {LShift Down}
@@ -1148,7 +1149,8 @@ If(ErrorLevel == 0){
 	Click, %foundX%, %foundY%
 		}
 	Sleep 5000
-	Send {tab 2}
+	Send {tab %Usernumber%}
+	Sleep 500
 	Send {enter}
 	Sleep 4000
 	Send {LShift Down}
