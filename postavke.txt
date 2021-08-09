@@ -1,9 +1,9 @@
-; v2.1
+; v2.2
 
-
-Password := "Ovdje upiši password" ; Password je potreban da bi skripta uradila relog
-RAGEMP   := "C:\RAGEMP" ; Lokacija RAGEMP foldera na racunaru
-usernumber := 2 ; Ako je karakter 2 upisuješ "4" ako je karakter 3 upisuješ 6
+RageUsername := "Ovdje upiši Rage Username" ; Username je potreban da bi skripta uradila relog
+Password     := "Ovdje upiši password" ; Password je potreban da bi skripta uradila relog
+RAGEMP       := "C:\RAGEMP" ; Lokacija RAGEMP foldera na racunaru
+usernumber   := 2 ; Ako je karakter 2 upisuješ "4" ako je karakter 3 upisuješ 6
 
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
 PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
