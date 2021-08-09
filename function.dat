@@ -773,12 +773,9 @@ loop 25
 	Send {SPACE}
 loop 7
 {
-	Sleep 500
 MouseMove, 0, 2000, 1, R
-
 Sleep 500
 Send {i}
-Sleep IntInventoryDelay
 CheckStolica := 0
 Stolicadrop:
 CheckStolica := CheckStolica + 1
