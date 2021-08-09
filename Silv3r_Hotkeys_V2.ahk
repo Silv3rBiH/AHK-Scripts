@@ -1,4 +1,4 @@
-; v1.41
+; v1.6
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
@@ -6,14 +6,14 @@ if not A_IsAdmin
 }
 #SingleInstance Force
 URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Silv3r_Hotkeys_V2.ahk,update.txt
+Sleep 1500
 FileReadLine, update, update.txt, 1
 FileReadLine, currentVersion, %A_ScriptName%, 1
-Sleep 1000
 	if (update = currentVersion) {
 	FileDelete, update.txt
 	} else {
 	FileCopy, update.txt, %A_ScriptName%, 1
-	Sleep 500
+	Sleep 1000
 	FileDelete, update.txt
 	msgbox, 0, Update uspijesan!, Update uspijesno obavljen, skripta ce se sada reloadati!
 	Reload
@@ -64,9 +64,13 @@ if FileExist("key.dll")
 		FileReadLine, updatep, postavke1.txt, 1
 		FileReadLine, currentVersionp, postavke.txt, 1
 		sleep 500
-		if (updatef = currentVersionf) {
+		if (updatep = currentVersionp) {
 			FileDelete, postavke1.txt
 		}else{
+			MsgBox Pronadjen je novi update postavki, vaše stare postavke ce biti spremljene kao postavke-backup.txt ako trebate nesto izvuci iz njih.
+			FormatTime timestamp, A_Now, yyMMdd
+			FileCopy, postavke.txt, postavke-backup%timestamp%.txt, 1
+			Sleep 500
 			FileCopy, postavke1.txt, postavke.txt, 1
 			Sleep 500
 			FileDelete, postavke1.txt
@@ -78,59 +82,59 @@ if FileExist("key.dll")
 		}
 	if FileExist("fish1.jpg") {
 		}else{
-		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/fish1.jpg,fish1.jpg
-		Sleep 200
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Slike/fish1.jpg,fish1.jpg
+		Sleep 300
 		}
 	if FileExist("fish2.jpg") {
 		}else{
-		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/fish2.jpg,fish2.jpg
-		Sleep 200
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Slike/fish2.jpg,fish2.jpg
+		Sleep 300
 		}
 	if FileExist("fish3.jpg") {
 		}else{
-		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/fish3.jpg,fish3.jpg
-		Sleep 200
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Slike/fish3.jpg,fish3.jpg
+		Sleep 300
 		}
 	if FileExist("fish4.jpg") {
 		}else{
-		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/fish4.jpg,fish4.jpg
-		Sleep 200
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Slike/fish4.jpg,fish4.jpg
+		Sleep 300
 		}
 	if FileExist("stolica.jpg") {
 		}else{
-		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/stolica.jpg,stolica.jpg
-		Sleep 200
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Slike/stolica.jpg,stolica.jpg
+		Sleep 300
 		}
 	if FileExist("sendvic.jpg") {
 		}else{
-		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/sendvic.jpg,sendvic.jpg
-		Sleep 200
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Slike/sendvic.jpg,sendvic.jpg
+		Sleep 300
 		}
 	if FileExist("voda.jpg") {
 		}else{
-		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/voda.jpg,voda.jpg
-		Sleep 200
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Slike/voda.jpg,voda.jpg
+		Sleep 300
 		}
 	if FileExist("dreamworldisopen.jpg") {
 		}else{
-		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/dreamworldisopen.jpg,dreamworldisopen.jpg
-		Sleep 200
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Slike/dreamworldisopen.jpg,dreamworldisopen.jpg
+		Sleep 300
 		}
 	if FileExist("dreamworld.jpg") {
 		}else{
-		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/dreamworld.jpg,dreamworld.jpg
-		Sleep 200
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Slike/dreamworld.jpg,dreamworld.jpg
+		Sleep 300
 		}
 	if FileExist("dot.png") {
 		}else{
-		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/dot.png,dot.png
-		Sleep 200
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Slike/dot.png,dot.png
+		Sleep 300
 		}
 
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/function.dat,function.dat
+		sleep 1500
 		FileReadLine, updatef, function.dat, 1
 		FileReadLine, currentVersionf, %A_AppDataCommon%\Silv3rHotkey\function.dat, 1
-		sleep 1500
 		if (updatef = currentVersionf) {
 		FileDelete, function.dat
 		} else {
@@ -153,5 +157,9 @@ dislink = %dislink1%%dislink2%
 
 #Include *i password.txt
 #Include *i postavke.txt
-#Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
-;#Include *i functiontest.dat
+
+if FileExist("functiontest.dat") {
+	#Include *i functiontest.dat
+	}else{
+	#Include *i %A_AppDataCommon%\Silv3rHotkey\function.dat
+	}
