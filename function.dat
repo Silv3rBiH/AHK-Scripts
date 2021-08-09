@@ -1062,7 +1062,7 @@ If(ErrorLevel == 0){
 	WebRequest.Open("POST", url, false)
 	WebRequest.SetRequestHeader("Content-Type", "application/json")
 	WebRequest.Send(postdata)
-
+}
 	provjerarestarta:
 	If WinExist("ahk_exe GTA5.exe")
 	{
@@ -1305,7 +1305,6 @@ ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%SendvicT
 			goto sendvic
 			}
 	}
-
 
 vodacheck := 0
 voda:
