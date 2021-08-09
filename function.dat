@@ -1,4 +1,4 @@
-; v1.91
+; v1.92
 ;Patch Notes:
 
 ;problem sa relogom na f9
@@ -740,14 +740,15 @@ DropStolica:
 stolicacheck := stolicacheck + 1
 MouseMove, 0, 2000, 1, R
 Send {i}
+Sleep IntInventoryDelay
 ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%StolicaTolerance% stolica.jpg
 If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
 	Click, %foundX%, %foundY%
-	sleep 300
+	sleep 500
 	}else{
-	if stolicacheck = 100
+	if stolicacheck = 300
 		{
 		stolicacheck := 0
 		MsgBox, 0, , Nemate stolica u inventoriu skripta ce preskocit dropanje stolica., 5
@@ -774,8 +775,10 @@ loop 7
 {
 	Sleep 500
 MouseMove, 0, 2000, 1, R
-	Send {i}
-	
+
+
+Send {i}
+Sleep IntInventoryDelay
 CheckStolica := 0
 Stolicadrop:
 CheckStolica := CheckStolica + 1
@@ -784,9 +787,9 @@ If(ErrorLevel == 0){
 	foundX := foundX + 5
 	foundY := foundY + 18
 	Click, %foundX%, %foundY%
-	sleep 300
+	sleep 500
 	}else{
-	if CheckStolica = 100
+	if CheckStolica = 300
 		{
 		CheckStolica := 0
 		MsgBox, 0, , Nemate stolica u inventoriu skripta ce preskocit dropanje stolica., 5
