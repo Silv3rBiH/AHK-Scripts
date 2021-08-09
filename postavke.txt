@@ -111,6 +111,7 @@ Hotkey, %CasinoCrvenaKey%, CasinoCrvena
 Hotkey, %DorucakKey%, Dorucak
 Hotkey, %QuickRelogKey%, QuickRelog
 Hotkey, %ReloadKey%, Reload
+Hotkey, %ReloadKey2%, Reload
 Hotkey, %HudShowHideKey%, CrosshairShow
 
 Gui, 1:Color, ffffff
@@ -124,5 +125,3 @@ FormatTime, Datum,, dd/MM/yyyy HH:mm:ss
 FileAppend, %Datum% - Pokrenuta skripta.`n, errorlog.txt
 
 Return
-
-!F9:: reload
