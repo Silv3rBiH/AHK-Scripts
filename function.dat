@@ -881,11 +881,6 @@ Loop
 
 pocetak:
 
-If not WinExist("ahk_exe GTA5.exe")
-{
-goto FishingStoped
-}
-
 send {e}
 
 pronadjiribu:
@@ -988,7 +983,7 @@ If(ErrorLevel == 0){
 	{
 		If not WinExist("ahk_exe GTA5.exe")
 		{
-		krug := 290
+		krug := 299
 		}
 	}
 
