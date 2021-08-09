@@ -1,4 +1,4 @@
-; v1.65
+; v1.67
 ;Patch Notes:
 
 ;tolerance
@@ -748,7 +748,7 @@ If(ErrorLevel == 0){
 	if stolicacheck = 100
 		{
 		stolicacheck := 0
-		msgbox Nemate stolica u inventoriu skripta ce preskocit dropanje stolica. , 3
+		MsgBox, 4, , Nemate stolica u inventoriu skripta ce preskocit dropanje stolica., 5
 		goto NemaStolica
 		}else{
 		goto DropStolica
@@ -786,7 +786,7 @@ If(ErrorLevel == 0){
 	if CheckStolica = 100
 		{
 		CheckStolica := 0
-		msgbox Skripta nije mogla pronaci stolicu u inventoriu pa ce preskociti taj dio. , 3
+		MsgBox, 4, , Nemate stolica u inventoriu skripta ce preskocit dropanje stolica., 5
 		goto NemaStolica
 		}else{
 		goto StolicaDrop
@@ -814,7 +814,7 @@ If(ErrorLevel == 0){
 		if sendvic2check = 100
 			{
 			sendvic2check := 0
-			msgbox Skripta nije mogla pronaci sendvic u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen. , 3
+			MsgBox, 4, , Skripta nije mogla pronaci sendvic u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen., 5
 			goto QuickRelog
 			}else{
 			goto sendvic2
@@ -840,7 +840,7 @@ If(ErrorLevel == 0){
 		if voda2check = 100
 			{
 			voda2check := 0
-			msgbox Skripta nije mogla pronaci vodu u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen. , 3
+			MsgBox, 4, , Skripta nije mogla pronaci vodu u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen., 5
 			goto QuickRelog
 			}else{
 			goto voda2
