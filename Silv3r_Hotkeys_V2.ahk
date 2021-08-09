@@ -1,4 +1,4 @@
-; v1.675
+; v1.8
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
