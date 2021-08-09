@@ -1,4 +1,4 @@
-; v1.673
+; v1.674
 ;Patch Notes:
 
 ;tolerance
@@ -865,6 +865,20 @@ Return
 
 Reload:
 FileAppend, %Datum% - Zaustavljena skripta - upecao %upecao% ribe.`n, errorlog.txt
+if upecao > 0
+{
+	url = %dislink% ; use the url from Discord webhook bot
+	postdata=
+	(
+	{
+	  "content": "<@%DiscordID%> Fish bot prestao sa radom %UserName% - Prekinuo pecati na %upecao%!"
+	}
+	)
+	WebRequest := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+	WebRequest.Open("POST", url, false)
+	WebRequest.SetRequestHeader("Content-Type", "application/json")
+	WebRequest.Send(postdata)
+}
 Reload
 Return
 
