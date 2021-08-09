@@ -1003,8 +1003,8 @@ If(ErrorLevel == 0){
 
 	if krug = 20
 	{
-		If not WinExist("ahk_exe GTA5.exe")
-		{
+		If WinExist("ahk_exe GTA5.exe") {
+		}else{
 		FileAppend, %Datum% - Nije pronadjena riba jer GTA nije bio upaljen.`n, errorlog.txt
 		krug := 299
 		}
