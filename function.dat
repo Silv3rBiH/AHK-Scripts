@@ -1,4 +1,4 @@
-; v1.67
+; v1.671
 ;Patch Notes:
 
 ;tolerance
@@ -731,6 +731,8 @@ Return
 
 
 PripremaPecanje:
+FormatTime, TimeString,, LongDate
+FileAppend, %TimeString% - Pocelo pripremanje pecanja.`n, errorlog.txt
 stolicacheck := 0
 If WinExist("ahk_exe GTA5.exe")
 {
@@ -748,7 +750,7 @@ If(ErrorLevel == 0){
 	if stolicacheck = 100
 		{
 		stolicacheck := 0
-		MsgBox, 4, , Nemate stolica u inventoriu skripta ce preskocit dropanje stolica., 5
+		MsgBox, 0, , Nemate stolica u inventoriu skripta ce preskocit dropanje stolica., 5
 		goto NemaStolica
 		}else{
 		goto DropStolica
@@ -786,7 +788,7 @@ If(ErrorLevel == 0){
 	if CheckStolica = 100
 		{
 		CheckStolica := 0
-		MsgBox, 4, , Nemate stolica u inventoriu skripta ce preskocit dropanje stolica., 5
+		MsgBox, 0, , Nemate stolica u inventoriu skripta ce preskocit dropanje stolica., 5
 		goto NemaStolica
 		}else{
 		goto StolicaDrop
@@ -811,10 +813,12 @@ If(ErrorLevel == 0){
 		Send {TAB}
 		Send {ENTER}
 		}else{
-		if sendvic2check = 100
+		if sendvic2check = 50
 			{
 			sendvic2check := 0
-			MsgBox, 4, , Skripta nije mogla pronaci sendvic u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen., 5
+			MsgBox, 0, , Skripta nije mogla pronaci sendvic u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen., 5
+			FormatTime, TimeString,, LongDate
+			FileAppend, %TimeString% - Skripta nije pronašla sendvic.`n, errorlog.txt
 			goto QuickRelog
 			}else{
 			goto sendvic2
@@ -837,10 +841,10 @@ If(ErrorLevel == 0){
 		Send {TAB}
 		Send {ENTER}
 		}else{
-		if voda2check = 100
+		if voda2check = 50
 			{
 			voda2check := 0
-			MsgBox, 4, , Skripta nije mogla pronaci vodu u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen., 5
+			MsgBox, 0, , Skripta nije mogla pronaci vodu u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen., 5
 			goto QuickRelog
 			}else{
 			goto voda2
