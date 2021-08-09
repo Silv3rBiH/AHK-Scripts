@@ -1,7 +1,7 @@
-; v1.65
+; v1.66
 
-Password := "Nark0s?!" ; Password je potreban da bi skripta uradila relog
-RAGEMP   := "D:\Program Files\RAGEMP" ; Lokacija RAGEMP foldera na racunaru
+Password := "Ovdje upiši password" ; Password je potreban da bi skripta uradila relog
+RAGEMP   := "C:\RAGEMP" ; Lokacija RAGEMP foldera na racunaru
 
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
 PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
@@ -119,6 +119,9 @@ WinSet, TransColor, ffffff
 Gui, 1:Add, Picture, x11 y46 w14 h14, dot.png
 Crosshair := 0
 Gui, 1:Hide
+
+FormatTime, Datum,, dd/MM/yyyy HH:mm:ss
+FileAppend, %Datum% - Pokrenuta skripta.`n, errorlog.txt
 
 Return
 
