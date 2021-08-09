@@ -1,9 +1,8 @@
-; v1.4
-; CASINO
+; v1.6
 
+Password := "Ovdje upisi password" ; Password je potreban da bi skripta uradila relog
+RAGEMP   := "C:\RAGEMP" ; Lokacija RAGEMP foldera na racunaru
 
-password := "Ovdje upisi password"
-RAGEMP   := "C:\RAGEMP"
 ; Hotkeys (Ako zelite mijenjati default postavke hotkeysa skripte koristite ! prije slova za ALT, ^	za CTRL, + za SHIFT)
 PrikaziSveKomandeKey          := "!0"     ; Prikaz svih komandi unutar ovog programa.
 
@@ -62,12 +61,20 @@ CustomText9 := ""
 KolikoSjemenki       := 10     ; koliko sjemenki da posadi u jednom krugu.
 
 ; Sleep time (Obicno ne treba mijenjati ovo, u slucaju nekih problema pokušati s promjenama)
-IntLMenuDelay        := 800    ; pauza (u ms) koliko treba da vam otvori L menu u autu.
-IntMMenuDelay        := 1500   ; pauza (u ms) koliko treba da vam otvori M menu kraj neke osobe.
-IntF5MenuDelay       := 800    ; pauza (u ms) koliko treba da vam otvori F5 menu.
+IntLMenuDelay        := 1200    ; pauza (u ms) koliko treba da vam otvori L menu u autu.
+IntMMenuDelay        := 1800   ; pauza (u ms) koliko treba da vam otvori M menu kraj neke osobe.
+IntF5MenuDelay       := 1200    ; pauza (u ms) koliko treba da vam otvori F5 menu.
 IntChatDelay         := 1000   ; pauza (u ms) koliko treba da posalje poruku. (najbolje po malo pojacavati ako se uoci greska)
 IntInventoryDelay    := 2200   ; pauza (u ms) pauza (u ms) koliko treba da vam otvori inventory.
 IntFishDelay         := 600    ; pauza (u ms) koliko treba pauze izmedju clicka na ribu za pecanje. (najmanja moguca je 600ms ispod ce pucat udice, pojacavati po 100ms)
+
+; Tolerancija na pretragu slika (Obicno ne treba mijenjati ovo, u slucaju nekih problema pokušati s promjenama)
+FishTolerance                 := *80
+SendvicTolerance              := *50
+VodaTolerance                 := *65
+StolicaTolerance              := *15
+DreamworldisopenTolerance     := *80
+DreamworldTolerance           := *80
 
 
 ; Hotkey mapping (ovo ne drkajte bez mog ovlastenja sjebat cete skriptu, hvala)
