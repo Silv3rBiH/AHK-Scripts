@@ -1,4 +1,4 @@
-; v1.8
+; v1.9
 ;Patch Notes:
 
 ;problem sa relogom na f9
@@ -1002,6 +1002,8 @@ If(ErrorLevel == 0){
 	Goto, jelo
 	}
 
+	msgbox %krug%
+
 	if krug = 20
 	{
 		If WinExist("ahk_exe GTA5.exe") {
@@ -1047,10 +1049,10 @@ If(ErrorLevel == 0){
 	Goto, pocetak
 	}
 
+
 	if krug = 300
-	fishingstoped:
-	FileAppend, %Datum% - Zakovalo na %upecao%.`n, errorlog.txt
 	{
+	FileAppend, %Datum% - Zakovalo na %upecao%.`n, errorlog.txt
 	url = %dislink% ; use the url from Discord webhook bot
 	postdata=
 	(
@@ -1062,7 +1064,6 @@ If(ErrorLevel == 0){
 	WebRequest.Open("POST", url, false)
 	WebRequest.SetRequestHeader("Content-Type", "application/json")
 	WebRequest.Send(postdata)
-}
 	provjerarestarta:
 	If WinExist("ahk_exe GTA5.exe")
 	{
@@ -1131,7 +1132,7 @@ If(ErrorLevel == 0){
 	Checkisdreamworldopen:
 	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%DreamworldisopenTolerance% dreamworldisopen.jpg
 	If(ErrorLevel == 0){
-	}else{
+		}else{
 	Goto, Checkisdreamworldopen
 	sleep 1000
 		}
@@ -1143,7 +1144,7 @@ If(ErrorLevel == 0){
 	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%DreamworldisopenTolerance% dreamworldisopen.jpg
 	If(ErrorLevel == 0){
 	Click, %foundX%, %foundY%
-	}
+		}
 	Sleep 5000
 	Send {tab 2}
 	Send {enter}
