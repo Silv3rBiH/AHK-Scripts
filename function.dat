@@ -831,7 +831,7 @@ If(ErrorLevel == 0){
 		}
 	
 	voda2check := 0
-	
+	Sleep 2000
 	voda2:
 	voda2check := voda2check + 1
 	
