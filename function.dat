@@ -1,4 +1,4 @@
-; v1.9
+; v1.91
 ;Patch Notes:
 
 ;problem sa relogom na f9
@@ -1001,8 +1001,6 @@ If(ErrorLevel == 0){
 	MouseMove, 0, 0
 	Goto, jelo
 	}
-
-	msgbox %krug%
 
 	if krug = 20
 	{
