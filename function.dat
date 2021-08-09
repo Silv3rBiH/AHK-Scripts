@@ -1,4 +1,4 @@
-; v1.61
+; v1.63
 ;Patch Notes:
 
 ;tolerance
@@ -1087,14 +1087,15 @@ If(ErrorLevel == 0){
 	SetWorkingDir, %ragemp%
 	Run, %RAGEMP%\updater.exe
 	SetWorkingDir %A_ScriptDir%
-	Sleep 10000
 	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, %DreamworldTolerance% dreamworld.jpg
 	If(ErrorLevel == 0){
 	Click, %foundX%, %foundY%
 		}	
+	Sleep 10000
+	
 	dreamworldopen := 1
 	Checkisdreamworldopen:
-	if dreamworldopen = 500
+	if dreamworldopen = 200
 	{
 	goto provjerarestarta
 	}
@@ -1103,6 +1104,7 @@ If(ErrorLevel == 0){
 	}else{
 	dreamworldopen := dreamworldopen + 1
 	Goto, Checkisdreamworldopen
+	sleep 1000
 		}
 
 	sleep 3000
