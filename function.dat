@@ -1,4 +1,4 @@
-; v2.31
+; v2.32
 ;Patch Notes:
 
 
@@ -999,7 +999,7 @@ If(ErrorLevel == 0){
 }else{
 	krug := krug + 1
 
-	if jelo = 500
+	if jelo = 250
 	{
 	jelo := 0
 	MouseMove, 0, 0
