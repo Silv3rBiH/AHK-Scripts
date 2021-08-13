@@ -1,10 +1,9 @@
-; v2.32
+; v2.33
 ;Patch Notes:
 
 
-
+;jelo na 180
 ;stolica sleep
-
 ;problem sa relogom na f9
 ;tolerance
 ;stolica
@@ -999,7 +998,7 @@ If(ErrorLevel == 0){
 }else{
 	krug := krug + 1
 
-	if jelo = 250
+	if jelo = 180
 	{
 	jelo := 0
 	MouseMove, 0, 0
