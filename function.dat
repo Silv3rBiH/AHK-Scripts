@@ -1,0 +1,1342 @@
+; v3
+; Ragemp 1.1
+
+;Patch Notes:
+;problem sa pecanjem na 1.1
+;stolica sleep
+;problem sa relogom na f9
+;tolerance
+;stolica
+;Relog
+; Casino
+; fix shop
+; hotfix
+; fix sjemenke
+; fix jelo
+; fix stolica
+
+
+;if (A_ScreenWidth = 1024 & A_ScreenHeight = 768) {
+;    ...
+;} else if (A_ScreenWidth = 1080 & A_ScreenHeight = 1024) {
+;    ...
+;}
+
+Quick_Relog(GTA5){
+Send, {F1}
+Sleep 1000
+if A_ScreenWidth = 0 
+{
+msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slikajte ovu gresku pa posaljite da se ispravi.
+}
+if A_ScreenWidth = 1920
+{
+Click, 300, 210
+}
+}
+
+
+
+Process_Suspend(PID_or_Name){
+    PID := (InStr(PID_or_Name,".")) ? ProcExist(PID_or_Name) : PID_or_Name
+    h:=DllCall("OpenProcess", "uInt", 0x1F0FFF, "Int", 0, "Int", pid)
+    If !h   
+        Return -1
+    DllCall("ntdll.dll\NtSuspendProcess", "Int", h)
+    DllCall("CloseHandle", "Int", h)
+}
+
+Process_Resume(PID_or_Name){
+    PID := (InStr(PID_or_Name,".")) ? ProcExist(PID_or_Name) : PID_or_Name
+    h:=DllCall("OpenProcess", "uInt", 0x1F0FFF, "Int", 0, "Int", pid)
+    If !h   
+        Return -1
+    DllCall("ntdll.dll\NtResumeProcess", "Int", h)
+    DllCall("CloseHandle", "Int", h)
+}
+
+ProcExist(PID_or_Name=""){
+    Process, Exist, % (PID_or_Name="") ? DllCall("GetCurrentProcessID") : PID_or_Name
+    Return Errorlevel
+}
+
+PrikaziSveKomande:
+	SoundBeep 150 , 150
+	SplashTextOn, 435, 375 , SVE KOMANDE, `n ALT+1 ILI NUMPAD 1 = PRETRES I OVJERAVANJE AKO OSOBA LEŽI`n ALT+2 ILI NUMPAD 2 = PRETRES AKO OSOBA LEŽI`n ALT+3 ILI NUMPAD 3 = PRETRES AKO JE DIGAO RUKE`n ALT+4 ILI NUMPAD 4 = OVJERAVA OSOBU`n ALT+5 ILI NUMPAD 5 = DIZANJE POVRIJEDJENE OSOBE S PODA`n ALT+6 ILI NUMPAD 6 = ODUZIMANJE KOMUNIKACIJE`n ALT+7 ILI NUMPAD 7 = AKO SI PRONASAO NESTO`n ALT+8 ILI NUMPAD 8 = AKO NISI PRONASAO NISTA`n ALT+Q = BRZI UNEQUIP ORUZJA`n ALT+I = BRZO OTKLJUCAVANJE I OTVARANJE GEPEKA U AUTU`n ALT+L = BRZO OTKLJUCAVANJE/ZAKLJUCAVANJE GEPEKA`n UP = PALI AUTO-VEŽE POJAS-ZAKLJUCAVA AUTO`n`n F11 = AUTOMATSKO RUDARENJE`n F12 = AFK KRETANJE`n`n`n MADE BY SILV3R BIH (Silvio Suljić)
+	Sleep, 5000
+	SplashTextOff
+Return
+
+CrosshairShow:
+if Crosshair = 0
+{
+Crosshair := 1
+Gui, 1:Show
+}else{
+Crosshair := 0
+Gui, 1:Hide
+}
+Return
+
+CustomTextCall1:
+Send {t}
+BlockInput On
+SendInput, %CustomText1%
+Send {Enter}
+BlockInput off
+Return
+
+CustomTextCall2:
+Send {t}
+BlockInput On
+SendInput, %CustomText2%
+Send {Enter}
+BlockInput off
+Return
+
+CustomTextCall3:
+Send {t}
+BlockInput On
+SendInput, %CustomText3%
+Send {Enter}
+BlockInput off
+Return
+
+CustomTextCall4:
+Send {t}
+BlockInput On
+SendInput, %CustomText4%
+Send {Enter}
+BlockInput off
+Return
+
+CustomTextCall5:
+Send {t}
+BlockInput On
+SendInput, %CustomText5%
+Send {Enter}
+BlockInput off
+Return
+
+CustomTextCall6:
+Send {t}
+BlockInput On
+SendInput, %CustomText6%
+Send {Enter}
+BlockInput off
+Return
+
+CustomTextCall7:
+Send {t}
+BlockInput On
+SendInput, %CustomText7%
+Send {Enter}
+BlockInput off
+Return
+
+CustomTextCall8:
+Send {t}
+BlockInput On
+SendInput, %CustomText8%
+Send {Enter}
+BlockInput off
+Return
+
+CustomTextCall9:
+Send {t}
+BlockInput On
+SendInput, %CustomText9%
+Send {Enter}
+BlockInput off
+Return
+
+PretresOvjeravanje:
+SoundBeep 150 , 150
+SplashTextOn, 250, , Pretres ako osoba lezi!
+WinMove, Pretres ako osoba lezi!,, 0 , 0
+	Send {t}
+	BlockInput On
+ 	SendInput, /me nisani osobu u glavu i ovjerava lika.
+	Send {Enter}
+	BlockInput Off
+	Sleep 1000
+	Send {t}
+	BlockInput On
+	SendInput, /do Metak bi bio u glavi.
+	Send {Enter}
+	BlockInput Off
+	Sleep 1000
+	Send {t}
+	BlockInput On
+ 	SendInput, /me pocinje detaljno pretresati osobu.
+	Send {Enter}
+	BlockInput off
+	Sleep 500
+	Send {m}
+	Sleep IntMMenuDelay
+	Send {5}
+	BlockInput Off
+Sleep, 500
+SplashTextOff
+Return
+
+PretresLezi:
+SoundBeep 150 , 150
+SplashTextOn, 250, , Pretres ako osoba lezi!
+WinMove, Pretres ako osoba lezi!,, 0 , 0
+	Send {t}
+	BlockInput On
+ 	SendInput, /me pocinje detaljno pretresati osobu.
+	Send {Enter}
+	BlockInput off
+	Sleep 500
+	Send {m}
+	Sleep IntMMenuDelay
+	Send {5}
+	BlockInput Off
+Sleep, 500
+SplashTextOff
+Return
+
+PretresPredao:
+SoundBeep 150 , 150
+SplashTextOn, 250, , Pretres ako je digao ruke!
+WinMove, Pretres ako je digao ruke!,, 0 , 0
+BlockInput On
+	Send {t}
+	BlockInput On
+ 	SendInput, /me drzeci pistolj jednom rukom uperen u osobu,drugom rukom zapocinje detaljan pretres.
+	Send {Enter}
+	BlockInput off
+	Sleep 1500
+	Send {t}
+	BlockInput On
+	SendInput, /do Da li bi se opirao?
+	Send {Enter}
+	BlockInput off
+	Sleep 500
+	Send {m}
+	Sleep IntMMenuDelay
+	Send {5}
+	BlockInput off
+Sleep, 500
+SplashTextOff
+Return
+
+Ovjeravanje:
+SoundBeep 150 , 150
+SplashTextOn, 250, , Ovjeravaš!
+WinMove, Ovjeravaš!,, 0 , 0
+	Send {t}
+	BlockInput On
+ 	SendInput, /me nisani osobu u glavu i ovjerava lika.
+	Send {Enter}
+	BlockInput Off
+	Sleep 1500
+	Send {t}
+	BlockInput On
+	SendInput, /do Metak bi bio u glavi.
+	Send {Enter}
+	BlockInput Off
+Sleep, 500
+SplashTextOff
+Return
+
+DizanjePovrijedjenog:
+SoundBeep 150 , 150
+SplashTextOn, 250, , Podiže osobu sa poda!
+WinMove, Podiže osobu sa poda!,, 0 , 0
+	send {t}
+	BlockInput On
+ 	SendInput, /me pomaze povrijedjenoj osobi da se skloni
+	Send {Enter}
+	BlockInput Off
+	Sleep 500
+	send {m}
+	Sleep IntMMenuDelay
+	send {6}
+Sleep, 500
+SplashTextOff
+Return
+
+OduzimanjeKomunikacije:
+SoundBeep 150 , 150
+SplashTextOn, 250, , Oduzimanje komunikacije!
+WinMove, Oduzimanje komunikacije!,, 0 , 0
+	Send {t}
+	BlockInput On
+ 	SendInput, /me drzeci pistolj jednom rukom uperen u osobu,drugom rukom oduzima komunikaciju.
+	Send {Enter}
+	BlockInput Off
+Sleep, 500
+SplashTextOff
+Return
+
+Pronalazak:
+SoundBeep 150 , 150
+SplashTextOn, 250, , Pronasao si nesto!
+WinMove, Pronasao si nesto!,, 0 , 0
+	Send {t}
+	BlockInput On
+ 	SendInput, /do Pronasao bih stvari koje bi mi bilo u interesu da uzmem,te ih brzo spremio u stek.
+	Send {Enter}
+	BlockInput Off
+Sleep, 500
+SplashTextOff
+Return
+
+NePronalazak:
+SoundBeep 150 , 150
+SplashTextOn, 250, , Nisi nista pronasao!
+WinMove, Nisi nista pronasao!,, 0 , 0
+	Send {t}
+	BlockInput On
+ 	SendInput, /do Ne bih pronasao nista od interesa.
+	Send {Enter}
+	BlockInput Off
+Sleep, 500
+SplashTextOff
+Return
+
+GepekInventori:
+SoundBeep 150 , 150 
+SplashTextOn, 250, , Otkljucavas gepek i otvaras inventori!
+WinMove, Otkljucavas gepek i otvaras inventori!,, 0 , 0
+	Send {l}
+	Sleep IntLMenuDelay
+	Send {5}
+	Sleep 100
+	send {i}
+Sleep 500
+SplashTextOff 
+Return
+
+Gepek:
+SoundBeep 150 , 150
+SplashTextOn, 250, , Otkljucavas/zakljucavas gepek!
+WinMove, Otkljucavas/zakljucavas gepek!,, 0 , 0
+	Send {l}
+	Sleep IntLMenuDelay
+	Send {5}
+Sleep 500
+SplashTextOff
+Return
+
+Unequip:
+SoundBeep 150 , 150
+SplashTextOn, 250, , Unequipaš oruzje!
+WinMove, Unequipaš oruzje!,, 0 , 0
+	Send {F5}
+	Sleep IntF5MenuDelay
+	Send {TAB}
+	Send {TAB}
+	Send {TAB}
+	Send {TAB}
+	Send {ENTER}
+	Send {TAB}
+	Send {TAB}	
+	Send {TAB}
+	Send {TAB}
+	Send {TAB}
+	Send {ENTER}
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *60 close.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 5
+	foundY := foundY + 5
+	Click, %foundX%, %foundY%
+}
+SplashTextOff
+Return
+
+Dorucak:
+	sendvic1:
+	Send {i}
+	Sleep IntInventoryDelay
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%SendvicTolerance% sendvic.jpg
+		If(ErrorLevel == 0){
+		foundX := foundX + 8
+		foundY := foundY + 8
+		Click, %foundX%, %foundY%
+		Sleep 500
+		Send {TAB}
+		Send {ENTER}
+		}else{
+		Goto, sendvic1
+		}
+	voda1:
+	Send {i}
+	Sleep IntInventoryDelay
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%VodaTolerance% voda.jpg
+		If(ErrorLevel == 0){
+		foundX := foundX + 8
+		foundY := foundY + 8
+		Click, %foundX%, %foundY%
+		Sleep 500
+		Send {TAB}
+		Send {ENTER}
+		}else{
+		Goto, voda1
+		}
+Return
+
+Sadjenje:
+
+MsgBox, 4,, Da li su sjemenke postavljene na prvo mjesto u inventory-u?
+IfMsgBox Yes
+if A_ScreenWidth = 0 
+{
+msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slikajte ovu gresku pa posaljite da se ispravi.
+}else{
+	if A_ScreenWidth = 1920
+	{
+	Loop %KolikoSjemenki%
+	{
+	Send {i}
+	Sleep %IntInventoryDelay%
+	Click, 70, 180
+	Sleep 500
+	Send {tab}
+	Sleep 100
+	Send {enter}
+	Send {w down}
+	Sleep 1500
+	Send {w up}
+	}
+	}else{
+		if A_ScreenWidth = 1366 
+		{
+		Loop %KolikoSjemenki%
+		{
+		Send {i}
+		Sleep %IntInventoryDelay%
+		Click, 70, 180
+		Sleep 500
+		Send {tab}
+		Sleep 100
+		Send {enter}
+		Send {w down}
+		Sleep 1500
+		Send {w up}
+		}
+		}else{
+			if A_ScreenWidth = 1366 
+			{
+			Loop %KolikoSjemenki%
+			{
+			Send {i}
+			Sleep %IntInventoryDelay%
+			Click, 70, 180
+			Sleep 500
+			Send {tab}
+			Sleep 100
+			Send {enter}
+			Send {w down}
+			Sleep 1500
+			Send {w up}
+			}
+			}
+		}
+	}
+}
+else
+MsgBox Prvo postavi sjemenke na prvo mjesto u invetory-u pa pokreni ponovo!
+return
+
+CasinoCrna:
+CRNA = 1000, 1050
+Br0 = 620, 900
+Br1 = 670, 950
+Br2 = 670, 900
+Br3 = 670, 850
+Br4 = 720, 950
+Br5 = 720, 900
+Br6 = 720, 850
+Br7 = 770, 950
+Br8 = 770, 900
+Br9 = 770, 850
+Br10 = 820, 950
+Br11 = 820, 900
+Br12 = 820, 850
+Br13 = 870, 950
+Br14 = 870, 900
+Br15 = 870, 850
+Br16 = 920, 950
+Br17 = 920, 900
+Br18 = 920, 850
+Br19 = 970, 950
+Br20 = 970, 900
+Br21 = 970, 850
+Br22 = 1020, 950
+Br23 = 1020, 900
+Br24 = 1020, 850
+Br25 = 1070, 950
+Br26 = 1070, 900
+Br27 = 1070, 850
+Br28 = 1120, 950
+Br29 = 1120, 900
+Br30 = 1120, 850
+Br31 = 1170, 950
+Br32 = 1170, 900
+Br33 = 1170, 850
+Br34 = 1230, 950
+Br35 = 1230, 900
+Br36 = 1230, 850
+WinActivate, ahk_exe GTA5.exe
+;InputBox, UserInput, Unesi ulog na sistem 1:, Unesi ulog na sistem 1:, , 200, 100
+;if ErrorLevel
+;    MsgBox, Prekinuli ste ulog.
+;else
+;Sistem1 := % UserInput * 18 * 2
+;Sistem1brojevi := % UserInput *1
+Sistem1 := 1 * 6 * 2
+Sistem1brojevi := 1 *1
+WinActivate, ahk_exe GTA5.exe
+
+			Loop {
+				Loop %Sistem1%
+				{
+				Click, 1300, 950
+				}
+				Loop %Sistem1%
+				{
+				Click, 1300, 850
+				}
+				Loop %Sistem1brojevi%
+				{
+				Click, %br35%
+				Click, %br17%
+				Click, %br29%
+				Click, %br26%
+				Click, %br23%
+				Click, %br5%
+				Send, {f3}
+				Send, {w}
+				Send, {f3}
+				Send, {tab}
+				Send, {space}
+				Send, {f3}
+				sleep 18000
+				}
+			}
+;Click, 50, 35
+sleep 500
+Send, {w}
+return
+
+CasinoCrvena:
+CRNA = 1000, 1050
+Br0 = 620, 900
+Br1 = 670, 950
+Br2 = 670, 900
+Br3 = 670, 850
+Br4 = 720, 950
+Br5 = 720, 900
+Br6 = 720, 850
+Br7 = 770, 950
+Br8 = 770, 900
+Br9 = 770, 850
+Br10 = 820, 950
+Br11 = 820, 900
+Br12 = 820, 850
+Br13 = 870, 950
+Br14 = 870, 900
+Br15 = 870, 850
+Br16 = 920, 950
+Br17 = 920, 900
+Br18 = 920, 850
+Br19 = 970, 950
+Br20 = 970, 900
+Br21 = 970, 850
+Br22 = 1020, 950
+Br23 = 1020, 900
+Br24 = 1020, 850
+Br25 = 1070, 950
+Br26 = 1070, 900
+Br27 = 1070, 850
+Br28 = 1120, 950
+Br29 = 1120, 900
+Br30 = 1120, 850
+Br31 = 1170, 950
+Br32 = 1170, 900
+Br33 = 1170, 850
+Br34 = 1230, 950
+Br35 = 1230, 900
+Br36 = 1230, 850
+WinActivate, ahk_exe GTA5.exe
+;InputBox, UserInput, Unesi ulog na sistem 1:, Unesi ulog na sistem 1:, , 200, 100
+;if ErrorLevel
+;    MsgBox, Prekinuli ste ulog.
+;else
+;Sistem1 := % UserInput * 18 * 2
+;Sistem1brojevi := % UserInput *1
+Sistem1 := 1 * 12 * 2
+Sistem1brojevi := 1 *1
+WinActivate, ahk_exe GTA5.exe
+			Loop
+			{
+				Loop %Sistem1%
+				{
+				Click, %crna%
+				}
+				Loop %Sistem1brojevi%
+				{
+				Click, %br1%
+				Click, %br3%
+				Click, %br7%
+				Click, %br9%
+				Click, %br16%
+				Click, %br18%
+				Click, %br25%
+				Click, %br27%
+				Click, %br34%
+				Click, %br36%
+				Click, %br23%
+				Click, %br21%
+				Send, {f3}
+				Send, {w}
+				Send, {f3}
+				Send, {tab}
+				Send, {space}
+				Send, {f3}
+				sleep 17000
+				}
+			}
+;Click, 50, 35
+sleep 500
+Send, {w}
+return
+
+
+AFK:
+SoundBeep 150 , 150
+SplashTextOn, 250, , Skripta za AFK uspijesto pokrenuta!
+WinMove, Skripta za AFK uspijesto pokrenuta!,, 0 , 0
+Sleep, 1000
+SplashTextOff
+    SetTimer,SendKey1,% (t_state:=!t_state) ? 500:"Off"
+    if(!t_state){
+        Send, {w}{a}{s}{d}
+    }
+Return
+SendKey1:
+    Send, {w}{a}{s}{d}
+Return
+
+KupovinaOpreme:
+if A_ScreenWidth = 0 
+{
+msgbox %A_ScreenWidth% x %A_ScreenHeight% za vasu rezoluciju nije podrzano slikajte ovu gresku pa posaljite da se ispravi.
+}else{
+	if A_ScreenWidth = 1920
+	{
+	Loop 5000
+		{
+		Click, 1850, 450
+		Sleep 220
+		Click, 1040, 530
+		Sleep 20
+		Click, 1055, 530
+		Sleep 20
+		Click, 1055, 530
+		Sleep 20
+		Click, 1055, 530
+		Sleep 20
+		Click, 1055, 530
+		Sleep 20
+		Click, 1150, 600
+		Sleep 200
+		}
+	}else{
+		if A_ScreenWidth = 1366 
+		{
+		Loop 5000
+			{
+			Click, 1290, 180
+			Sleep 200
+			Click, 780, 380
+			Sleep 20
+			Click, 780, 380
+			Sleep 20
+			Click, 780, 380
+			Sleep 20
+			Click, 780, 380
+			Sleep 20
+			Click, 780, 380
+			Sleep 20
+			Click, 880, 440
+			Sleep 200
+			}
+		}else{
+			if A_ScreenWidth = 1366 
+			{
+			Loop 5000
+				{
+				Click, 1290, 180
+				Sleep 200
+				Click, 780, 380
+				Sleep 20
+				Click, 780, 380
+				Sleep 20
+				Click, 780, 380
+				Sleep 20
+				Click, 780, 380
+				Sleep 20
+				Click, 780, 380
+				Sleep 20
+				Click, 880, 440
+				Sleep 200
+				}
+			}
+		}
+	}
+}
+Return
+
+Rudarenje:
+SoundBeep 150 , 150
+SplashTextOn, 250, , Skripta za rudarenje uspijesto pokrenuta!
+WinMove, Skripta za rudarenje uspijesto pokrenuta!,, 0 , 0
+Sleep, 1000
+SplashTextOff
+
+    SetTimer,SendKey,% (t_state:=!t_state) ? 500:"Off"
+    if(!t_state){
+        Send, {e}{e}{e}{e}
+    }
+Return
+SendKey:
+    Send, {e}{e}{e}{e}
+Return
+
+
+PripremaPecanje:
+FileAppend, %Datum% - Pocelo pripremanje pecanja.`n, errorlog.txt
+stolicacheck := 0
+If WinExist("ahk_exe GTA5.exe")
+{
+DropStolica:
+stolicacheck := stolicacheck + 1
+MouseMove, 0, 2000, 1, R
+Send {i}
+Sleep IntInventoryDelay
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%StolicaTolerance% stolica.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 5
+	foundY := foundY + 18
+	Click, %foundX%, %foundY%
+	sleep 500
+	}else{
+	if stolicacheck = 15
+		{
+		stolicacheck := 0
+		MsgBox, 0, , Nemate stolica u inventoriu skripta ce preskocit dropanje stolica., 5
+		FileAppend, %Datum% - Stolice nisu pronadjene PRESKOCIO.`n, errorlog.txt
+		goto NemaStolica
+		}else{
+		goto DropStolica
+		}
+	}
+	Send {TAB 2}
+	Send {SPACE}
+	Send {TAB 2}
+	Send {1}
+	Send {TAB}
+loop 25
+{
+	Send {SPACE 2}
+	Send {TAB 3}
+}
+	Send {SPACE}
+	Send {TAB 2}
+	Send {SPACE}
+loop 7
+{
+Sleep 500
+CheckStolica := 0
+Stolicadrop:
+MouseMove, 0, 2000, 1, R
+Send {i}
+Sleep IntInventoryDelay
+CheckStolica := CheckStolica + 1
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%StolicaTolerance% stolica.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 5
+	foundY := foundY + 18
+	Click, %foundX%, %foundY%
+	sleep 500
+	}else{
+	if CheckStolica = 10
+		{
+		CheckStolica := 0
+		MsgBox, 0, , Nemate stolica u inventoriu skripta ce preskocit dropanje stolica., 5
+		FileAppend, %Datum% - Stolice nisu pronadjene PRESKOCIO.`n, errorlog.txt
+		goto NemaStolica
+		}else{
+		goto StolicaDrop
+		}
+	}
+	Send {TAB}
+	Send {SPACE}
+}
+	NemaStolica:
+	sendvic2check := 0
+	
+	sendvic2:
+	sendvic2check := sendvic2check + 1
+	MouseMove, 0, 2000, 1, R
+	Send {i}
+	Sleep IntInventoryDelay
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%SendvicTolerance% sendvic.jpg
+		If(ErrorLevel == 0){
+		foundX := foundX + 8
+		foundY := foundY + 8
+		Click, %foundX%, %foundY%
+		Sleep 500
+		Send {TAB}
+		Send {ENTER}
+		}else{
+		if sendvic2check = 15
+			{
+			sendvic2check := 0
+			MsgBox, 0, , Skripta nije mogla pronaci sendvic u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen., 5
+			FileAppend, %Datum% - Sendvic nije pronadjen RELOG.`n, errorlog.txt
+			goto QuickRelog
+			}else{
+			goto sendvic2
+			}
+		}
+	
+	voda2check := 0
+	Sleep 2000
+	voda2:
+	voda2check := voda2check + 1
+	MouseMove, 0, 2000, 1, R
+	Send {i}
+	Sleep IntInventoryDelay
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%VodaTolerance% voda.jpg
+		If(ErrorLevel == 0){
+		foundX := foundX + 8
+		foundY := foundY + 8
+		Click, %foundX%, %foundY%
+		Sleep 500
+		Send {TAB}
+		Send {ENTER}
+		}else{
+		if voda2check = 15
+			{
+			voda2check := 0
+			MsgBox, 0, , Skripta nije mogla pronaci vodu u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen., 5
+			FileAppend, %Datum% - Voda nije pronadjena RELOG.`n, errorlog.txt
+			goto QuickRelog
+			}else{
+			goto voda2
+			}
+		}
+		Goto Pecanje	
+}
+goto Pecanje
+Return
+
+QuickRelog:
+FileAppend, %Datum% - Pokrenut QuickRelog-ALT+F12.`n, errorlog.txt
+Quick_Relog(GTA5)
+Return
+
+QuickRelog1:
+FileAppend, %Datum% - Pokrenut QuickRelog-ALT+F12.`n, errorlog.txt
+Process_Suspend("gta5.exe")
+Sleep, 8000
+Process_Resume("gta5.exe")
+Return
+
+Reload:
+FileAppend, %Datum% - Zaustavljena skripta - upecao %upecao% ribe.`n, errorlog.txt
+if upecao > 0
+{
+	url = %dislink% ; use the url from Discord webhook bot
+	postdata=
+	(
+	{
+	  "content": "<@%DiscordID%> Fish bot prestao sa radom %UserName% - Prekinuo pecati na %upecao%!"
+	}
+	)
+	WebRequest := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+	WebRequest.Open("POST", url, false)
+	WebRequest.SetRequestHeader("Content-Type", "application/json")
+	WebRequest.Send(postdata)
+}
+Reload
+Return
+
+; ===========================================================================
+; === Pecanje ====== Pecanje ====== Pecanje ====== Pecanje ====== Pecanje ===
+; ===========================================================================
+
+Pecanje:
+FileAppend, %Datum% - Pokrenuto pecanje-F9.`n, errorlog.txt
+Sleep 1000
+mouseclick = 0
+mousemove = 0
+upecao = 0
+jelo = 0
+provjera = 0
+krug = 0
+
+Loop
+{
+Loop
+{
+
+pocetak:
+
+send {e}
+
+pronadjiribu:
+
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%FishTolerance% fish1.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 0
+	foundY := foundY + 20
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	krug = 0
+	jelo := jelo + 1
+	upecao := upecao + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0
+}else{
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%FishTolerance% fish2.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 0
+	foundY := foundY + 20
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	krug = 0
+	jelo := jelo + 1
+	upecao := upecao + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0
+}else{
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%FishTolerance% fish3.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 0
+	foundY := foundY + 20
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	krug = 0
+	jelo := jelo + 1
+	upecao := upecao + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0
+}else{
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%FishTolerance% fish4.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 0
+	foundY := foundY + 20
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	krug = 0
+	jelo := jelo + 1
+	upecao := upecao + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0
+}else{
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%FishTolerance% fish5.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 0
+	foundY := foundY + 20
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	krug = 0
+	jelo := jelo + 1
+	upecao := upecao + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0
+}else{
+	krug := krug + 1
+
+	if jelo = 150
+	{
+	jelo := 0
+	MouseMove, 0, 0
+	Goto, jelo
+	}
+
+	if krug = 20
+	{
+		If WinExist("ahk_exe GTA5.exe") {
+		}else{
+		FileAppend, %Datum% - Nije pronadjena riba jer GTA nije bio upaljen.`n, errorlog.txt
+		krug := 299
+		}
+	}
+
+		if krug = 110
+	{
+		If WinExist("ahk_exe GTA5.exe")
+		{
+		FileAppend, %Datum% - Krug 110-MouseMove.`n, errorlog.txt
+		MouseMove, 0, 0
+		Goto, pocetaK
+		}else{
+		FileAppend, %Datum% - Nije pronadjena riba jer GTA nije bio upaljen.`n, errorlog.txt
+		krug := 290
+		}
+	}
+
+	if krug = 160
+	{
+	MouseMove, 0, 0
+	FileAppend, %Datum% - Krug 160-BackupClick.`n, errorlog.txt
+	Click, %BackupClickX%, %BackupClickY%
+	Goto, pocetak
+	}
+
+	if krug = 220
+	{
+	MouseMove, 0, 0
+	FileAppend, %Datum% - Krug 220-BackupClick 2nd try.`n, errorlog.txt
+	Click, %BackupClickX%, %BackupClickY%
+	Goto, pocetak
+	}
+
+	if krug = 280
+	{
+	FileAppend, %Datum% - Krug 280-MouseMove 2nd try.`n, errorlog.txt
+	MouseMove, 0, 0
+	Goto, pocetak
+	}
+
+
+	if krug = 300
+	{
+	FileAppend, %Datum% - Zakovalo na %upecao%.`n, errorlog.txt
+	url = %dislink% ; use the url from Discord webhook bot
+	postdata=
+	(
+	{
+	  "content": "<@%DiscordID%> Fish bot prestao sa radom %UserName% - Zakovalo na %upecao%!"
+	}
+	)
+	WebRequest := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+	WebRequest.Open("POST", url, false)
+	WebRequest.SetRequestHeader("Content-Type", "application/json")
+	WebRequest.Send(postdata)
+	provjerarestarta:
+	If WinExist("ahk_exe GTA5.exe")
+	{
+	FileAppend, %Datum% - Pokušava QuickRelog pa login te nastavljanje pecanja.`n, errorlog.txt
+	Quick_Relog(GTA5)
+	isopen = 0
+	Checkisdreamworldopen1:
+	isopen = isopen + 1
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%DreamworldisopenTolerance% dreamworldisopen.jpg
+	If(ErrorLevel == 0){
+		}else{
+			if isopen = 2000 
+			{
+				If WinExist("ahk_exe GTA5.exe") {
+				WinClose
+				Sleep 5000
+				Goto pronadjiribu
+				}
+			}
+		Goto, Checkisdreamworldopen1
+	}
+	Sleep, 1000
+	Send {tab 3}
+	Sleep 400
+	Send {text}%RageUsername%
+	Sleep 400
+	Send {tab}
+	Sleep 400
+	Send {text}%password%
+	Sleep 1000
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%DreamworldisopenTolerance% dreamworldisopen.jpg
+	If(ErrorLevel == 0){
+	Click, %foundX%, %foundY%
+	}
+	Sleep 5000
+	Send {tab %Usernumber%}
+	Sleep 500
+	Send {enter}
+	Sleep 4000
+	Send {LShift Down}
+	MouseMove, 0, -5000, 100, R
+	MouseMove, 0, -5000, 100, R
+	MouseMove, 0, -5000, 100, R
+	MouseMove, 0, -5000, 100, R
+	Send {LShift Up}
+	Sleep 3000
+	Click, 1400, 400
+	Sleep 1000
+	Send {tab}
+	Send {space}
+	Sleep 1000
+	Send {LShift Down}
+	MouseMove, 0, -5000, 100, R
+	Send {LShift Up}
+	Sleep 2000
+	Send {o}
+	Sleep 1500
+	Send {o}
+	Sleep 1500
+	Send {o}
+	Sleep 1500
+	Send {o}
+	Sleep 1500
+	Send {o}
+	Sleep 1500
+	Send {o}
+	Sleep 1500
+	goto PripremaPecanje
+
+	}else{
+	
+	FileAppend, %Datum% - Pokušava pokrenut RAGEMP odabrat server te logovat i nastavit pecat`n, errorlog.txt
+	SetWorkingDir, %ragemp%
+	Run, %RAGEMP%\updater.exe
+	SetWorkingDir %A_ScriptDir%
+	Dreamworldragemp:
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%DreamworldTolerance% dreamworld.jpg
+	If(ErrorLevel == 0){
+	Click, %foundX%, %foundY%
+		}else{
+		goto dreamworldragemp
+		}	
+	Sleep 10000
+	dreamworldopen := 1
+	Checkisdreamworldopen:
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%DreamworldisopenTolerance% dreamworldisopen.jpg
+	If(ErrorLevel == 0){
+		}else{
+	Goto, Checkisdreamworldopen
+	sleep 1000
+		}
+	sleep 3000
+	Send {tab 3}
+	Sleep 400
+	Send {text}%RageUsername%
+	Sleep 400
+	Send {tab}
+	Sleep 400
+	Send {text}%password%
+	Sleep 1000
+	ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%DreamworldisopenTolerance% dreamworldisopen.jpg
+	If(ErrorLevel == 0){
+	Click, %foundX%, %foundY%
+		}
+	Sleep 5000
+	Send {tab %Usernumber%}
+	Sleep 500
+	Send {enter}
+	Sleep 4000
+	Send {LShift Down}
+	MouseMove, 0, -5000, 100, R
+	MouseMove, 0, -5000, 100, R
+	MouseMove, 0, -5000, 100, R
+	MouseMove, 0, -5000, 100, R
+	Send {LShift Up}
+	Sleep 3000
+	Click, 1400, 400
+	Sleep 1000
+	Send {tab}
+	Send {space}
+	Sleep 1000
+	Send {LShift Down}
+	MouseMove, 0, -5000, 100, R
+	Send {LShift Up}
+	Sleep 2000
+	Send {o}
+	Sleep 1500
+	Send {o}
+	Sleep 1500
+	Send {o}
+	Sleep 1500
+	Send {o}
+	Sleep 1500
+	Send {o}
+	Sleep 1500
+	Send {o}
+	Sleep 1500
+	goto PripremaPecanje
+	}
+
+}
+	Goto, pronadjiribu
+}
+}
+}
+}
+}
+}
+
+jelo:
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%FishTolerance% fish1.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 0
+	foundY := foundY + 20
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	krug = 0
+	upecao := upecao + 1
+	jelo := jelo + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0 ; Move the alert screen away from the center
+}else{
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%FishTolerance% fish2.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 0
+	foundY := foundY + 20
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	krug = 0
+	upecao := upecao + 1
+	jelo := jelo + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0 ; Move the alert screen away from the center
+}else{
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%FishTolerance% fish3.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 0
+	foundY := foundY + 20
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	krug = 0
+	upecao := upecao + 1
+	jelo := jelo + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0 ; Move the alert screen away from the center
+}else{
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%FishTolerance% fish4.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 0
+	foundY := foundY + 20
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	krug = 0
+	jelo := jelo + 1
+	upecao := upecao + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0
+}else{
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%FishTolerance% fish5.jpg
+If(ErrorLevel == 0){
+	foundX := foundX + 0
+	foundY := foundY + 20
+	BackupClickX := foundX
+	BackupClickY := foundY
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	sleep %IntFishDelay%
+	Click, %foundX%, %foundY%
+	krug = 0
+	jelo := jelo + 1
+	upecao := upecao + 1
+	SplashTextOn, 40, , %upecao%
+	WinMove, %upecao%,, 0 , 0
+}else{
+	Goto, jelo
+}
+}
+}
+}
+}
+
+FileAppend, %Datum% - Jelo nakon 500 uspjesnih pecanja.`n, errorlog.txt
+
+sendviccheck := 0
+sendvic:
+sendviccheck := sendviccheck + 1
+Send {i}
+Sleep 500
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%SendvicTolerance% sendvic.jpg
+	If(ErrorLevel == 0){
+	foundX := foundX + 8
+	foundY := foundY + 8
+	Click, %foundX%, %foundY%
+	Sleep 500
+	Send {TAB}
+	Send {ENTER}
+	}else{
+	if sendviccheck = 100
+			{
+			sendviccheck := 0
+			msgbox Skripta nije mogla pronaci sendvic u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen. , 3
+			goto QuickRelog
+			}else{
+			goto sendvic
+			}
+	}
+
+vodacheck := 0
+voda:
+vodacheck := vodacheck + 1
+Send {i}
+Sleep 500
+ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%VodaTolerance% voda.jpg
+	If(ErrorLevel == 0){
+	foundX := foundX + 8
+	foundY := foundY + 8
+	Click, %foundX%, %foundY%
+	Sleep 500
+	Send {TAB}
+	Send {ENTER}
+	}else{
+	if vodaheck = 100
+			{
+			vodacheck := 0
+			msgbox Skripta nije mogla pronaci sendvic u inventoriu pa ce zaustaviti pecanje i vratiti na relog screen. , 3
+			goto QuickRelog
+			}else{
+			goto voda
+			}
+	}
+}
+Return
