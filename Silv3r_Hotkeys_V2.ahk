@@ -1,4 +1,4 @@
-; v1.8
+; v3
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"
@@ -123,6 +123,11 @@ if FileExist("key.dll")
 	if FileExist("dreamworld.jpg") {
 		}else{
 		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Slike/dreamworld.jpg,dreamworld.jpg
+		Sleep 300
+		}
+	if FileExist("F1Dreamworld.jpg") {
+		}else{
+		URLDownloadToFile,https://raw.githubusercontent.com/Silv3rBiH/AHK-Scripts/main/Slike/f1dreamworld.jpg,F1Dreamworld.jpg
 		Sleep 300
 		}
 	if FileExist("dot.png") {
