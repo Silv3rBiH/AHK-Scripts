@@ -21,6 +21,7 @@ DESKTOP-ENSG1H2
 DESKTOP-0DJ577T
 Gago Kapuchino
 
+DESKTOP-SN7Q7RI
 DESKTOP-PQB3M1M
 Skoni Falcone
 
@@ -29,3 +30,6 @@ Bogdan Stojković
 
 DESKTOP-5U7HH77
 Harba Hukanovic
+
+DESKTOP-UBSNHHU
+Cegi Bac
