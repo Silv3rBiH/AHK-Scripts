@@ -1,4 +1,4 @@
-; v3.6
+; v3.7
 ;Patch Notes:
 
 ;stolica sleep
@@ -355,9 +355,7 @@ Dorucak:
 		If(ErrorLevel == 0){
 		foundX := foundX + 8
 		foundY := foundY + 8
-		Sleep 500
-		Click, %foundX%, %foundY%
-		Sleep 500
+		Sleep 1000
 		Click, %foundX%, %foundY%
 		Sleep 500
 		Send {TAB}
@@ -374,9 +372,7 @@ Dorucak:
 		If(ErrorLevel == 0){
 		foundX := foundX + 8
 		foundY := foundY + 8
-		Sleep 500
-		Click, %foundX%, %foundY%
-		Sleep 500
+		Sleep 1000
 		Click, %foundX%, %foundY%
 		Sleep 500
 		Send {TAB}
