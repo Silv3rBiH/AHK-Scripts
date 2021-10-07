@@ -1,4 +1,4 @@
-; v3.3
+; v3.4
 ;Patch Notes:
 
 ;stolica sleep
@@ -359,7 +359,7 @@ Dorucak:
 		Sleep 500
 		Send {TAB}
 		Send {ENTER}
-		Sleep 2000
+		Sleep 4000
 		}else{
 		Goto, sendvic1
 		}
@@ -375,7 +375,7 @@ Dorucak:
 		Sleep 500
 		Send {TAB}
 		Send {ENTER}
-		Sleep 2000
+		Sleep 4000
 		}else{
 		Goto, voda1
 		}
@@ -1311,7 +1311,7 @@ ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%SendvicT
 	Sleep 500
 	Send {TAB}
 	Send {ENTER}
-	Sleep 2000
+	Sleep 4000
 	}else{
 	if sendviccheck = 100
 			{
@@ -1336,7 +1336,7 @@ ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%VodaTole
 	Sleep 500
 	Send {TAB}
 	Send {ENTER}
-	Sleep 2000
+	Sleep 4000
 	}else{
 	if vodaheck = 100
 			{
