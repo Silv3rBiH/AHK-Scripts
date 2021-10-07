@@ -1,4 +1,4 @@
-; v3.7
+; v3.8
 ;Patch Notes:
 
 ;stolica sleep
@@ -1309,6 +1309,7 @@ ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%SendvicT
 	If(ErrorLevel == 0){
 	foundX := foundX + 8
 	foundY := foundY + 8
+	Sleep 1000
 	Click, %foundX%, %foundY%
 	Sleep 500
 	Send {TAB}
@@ -1334,6 +1335,7 @@ ImageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%VodaTole
 	If(ErrorLevel == 0){
 	foundX := foundX + 8
 	foundY := foundY + 8
+	Sleep 1000
 	Click, %foundX%, %foundY%
 	Sleep 500
 	Send {TAB}
