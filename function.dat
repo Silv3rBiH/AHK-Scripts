@@ -1,4 +1,4 @@
-; v3.4
+; v3.5
 ;Patch Notes:
 
 ;stolica sleep
@@ -356,6 +356,7 @@ Dorucak:
 		foundX := foundX + 8
 		foundY := foundY + 8
 		Click, %foundX%, %foundY%
+		Click, %foundX%, %foundY%
 		Sleep 500
 		Send {TAB}
 		Send {ENTER}
@@ -371,6 +372,7 @@ Dorucak:
 		If(ErrorLevel == 0){
 		foundX := foundX + 8
 		foundY := foundY + 8
+		Click, %foundX%, %foundY%
 		Click, %foundX%, %foundY%
 		Sleep 500
 		Send {TAB}
